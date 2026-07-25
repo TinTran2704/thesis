@@ -1,0 +1,69 @@
+% ===================== PHỤ LỤC =====================================
+\appendix
+\chapter*{PHỤ LỤC}
+\addcontentsline{toc}{chapter}{PHỤ LỤC}
+\markboth{PHỤ LỤC}{PHỤ LỤC}
+
+\section*{Phụ lục A. Danh mục đầy đủ các đặc trưng đầu vào}
+\addcontentsline{toc}{section}{Phụ lục A. Danh mục đầy đủ các đặc trưng đầu vào}
+
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{longtable}{@{}c p{6.5cm} p{4.5cm}@{}}
+\caption{Chín đặc trưng hành vi theo tuần ($\bvec_i^{(t)} \in \mathbb{R}^9$)}\\
+\toprule
+\textbf{STT} & \textbf{Đặc trưng} & \textbf{Đơn vị} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{STT} & \textbf{Đặc trưng} & \textbf{Đơn vị} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1 & Tổng thời gian xem video & giây \\
+2 & Số lượt xem video & lượt \\
+3 & Số lần tua lại & lần \\
+4 & Tổng thời lượng tua lại & giây \\
+5 & Chương video trung bình đã xem & chỉ số \\
+6 & Số lần thử bài tập & lần \\
+7 & Tổng điểm bài tập & điểm \\
+8 & Số câu trả lời đúng & câu \\
+9 & Số câu hoàn thành & câu \\
+\end{longtable}
+
+\section*{Phụ lục B. Siêu tham số chính của khung}
+\addcontentsline{toc}{section}{Phụ lục B. Siêu tham số chính của khung}
+
+\renewcommand{\arraystretch}{1.25}
+\small
+\begin{longtable}{@{}p{5cm} p{6cm}@{}}
+\caption{Các siêu tham số chính sử dụng trong thực nghiệm}\\
+\toprule
+\textbf{Siêu tham số} & \textbf{Giá trị} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Siêu tham số} & \textbf{Giá trị} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Tỷ lệ chia tập (train/val/test) & 8:1:1, phân tầng theo nhãn \\
+Hạt giống ngẫu nhiên & 42 \\
+Số cửa sổ quan sát & W $\in \{1, 2, 4\}$ tuần \\
+Tổng số cấu hình nội tại & 48 ($3 \times 4 \times 2 \times 2$) \\
+$\beta$ (CB-Focal) & 0,999 \\
+$\gamma$ (focal) & $[0{,}5; 2]$ \\
+$\lambda$ (trọng số CB-Focal vs. Ord) & điều chỉnh theo cửa sổ \\
+$k$ (KNN imputation) & ước lượng trên tập huấn luyện \\
+Bộ trích xuất chuỗi & BiLSTM, GRU-AttentionLite \\
+\bottomrule
+\end{longtable}
+
+\section*{Phụ lục C. Phân công đóng góp (CRediT)}
+\addcontentsline{toc}{section}{Phụ lục C. Phân công đóng góp (CRediT)}
+
+\noindent\textbf{Trần Bảo Tín:} Conceptualization, Methodology, Software, Formal Analysis, Data curation, Investigation, Writing -- Original Draft.
+
+\noindent\textbf{Nguyễn Trần Minh Thư:} Conceptualization, Methodology, Validation, Writing -- Review \& Editing, Supervision.

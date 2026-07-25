@@ -1,0 +1,293 @@
+% ===================== CHƯƠNG 2: PHƯƠNG PHÁP =======================
+\chapter{PHƯƠNG PHÁP THỰC HIỆN ĐỀ TÀI}
+\label{ch:phuongphap}
+
+Chương này trình bày cơ sở lý thuyết của các thành phần kỹ thuật được sử dụng, phát biểu hình thức bài toán dự báo rủi ro có thứ tự, và mô tả chi tiết kiến trúc năm tầng của khung EarlyRisk-MOOC.
+
+\section{Cơ sở lý thuyết}
+\label{sec:colythuyet}
+
+\subsection{Học có giám sát và bài toán phân loại}
+
+Bài toán dự báo rủi ro bỏ học thuộc phạm trù \textit{học có giám sát} (\textit{supervised learning}): từ một tập dữ liệu huấn luyện gồm các cặp (đầu vào, nhãn), mô hình học một ánh xạ từ không gian đầu vào sang không gian nhãn sao cho tổng quát hóa tốt cho dữ liệu mới. Trong phân loại, không gian nhãn là rời rạc. Mục tiêu học được hình thức hóa như việc tìm tham số $\theta$ tối thiểu hóa một hàm mất mát kỳ vọng trên phân phối dữ liệu, được xấp xỉ bằng trung bình thực nghiệm trên tập huấn luyện. Vì phân phối thực không quan sát được trực tiếp, chất lượng của mô hình phải được đánh giá trên một tập kiểm tra tách biệt, không được dùng trong quá trình huấn luyện -- nguyên tắc cơ bản này chính là cơ sở của giao thức chia tập 8:1:1 trong đồ án.
+
+Sự thành công của một mô hình học có giám sát phụ thuộc vào ba yếu tố: chất lượng và lượng dữ liệu, sự phù hợp giữa lớp mô hình và cấu trúc bài toán, và chất lượng của quá trình tối ưu. Đồ án tác động vào cả ba: sử dụng cohort lớn và được lọc cẩn thận (yếu tố dữ liệu), lựa chọn mô hình chuỗi thời gian phù hợp với dữ liệu tuần tự (yếu tố mô hình), và áp dụng quy trình huấn luyện có chính quy hóa và dừng sớm (yếu tố tối ưu).
+
+\subsection{Bài toán phân loại có thứ tự}
+
+Phân loại có thứ tự (\textit{ordinal classification}) là một biến thể của bài toán phân loại trong đó các nhãn có một quan hệ thứ tự tự nhiên. Khác với phân loại danh định (\textit{nominal}) -- nơi mọi sai lệch giữa các lớp đều bị phạt như nhau -- phân loại có thứ tự coi việc dự báo sai một bậc (ví dụ dự báo lớp C khi nhãn thật là B) là ít nghiêm trọng hơn sai nhiều bậc (dự báo lớp E khi nhãn thật là B). Trong bài toán dự báo rủi ro bỏ học, năm mức A $\succ$ B $\succ$ C $\succ$ D $\succ$ E mang một thứ tự rủi ro rõ ràng, do đó việc khai thác cấu trúc thứ tự này thông qua một thành phần mất mát chuyên biệt là một lựa chọn thiết kế hợp lý.
+
+\subsection{Mạng nơ-ron hồi quy và LSTM}
+
+Mạng nơ-ron hồi quy (RNN) là một họ kiến trúc được thiết kế để xử lý dữ liệu chuỗi, trong đó trạng thái ẩn tại mỗi bước thời gian phụ thuộc vào đầu vào hiện tại và trạng thái ẩn của bước trước. Một cách hình thức, với chuỗi đầu vào $\mathbf{x}_1, \dots, \mathbf{x}_T$, RNN cập nhật trạng thái ẩn theo $\mathbf{h}_t = \tanh(W \mathbf{x}_t + U \mathbf{h}_{t-1} + b)$. Tính chất hồi quy này cho phép RNN, về mặt lý thuyết, ghi nhớ thông tin từ toàn bộ lịch sử chuỗi. Tuy nhiên, RNN thuần gặp khó khăn nghiêm trọng với hiện tượng \emph{tiêu biến gradient} (\textit{vanishing gradient}) hoặc \emph{bùng nổ gradient} (\textit{exploding gradient}) khi xử lý các chuỗi dài. Nguyên nhân nằm ở chỗ trong quá trình lan truyền ngược qua thời gian, gradient được nhân liên tiếp với ma trận trọng số qua nhiều bước; nếu các giá trị riêng của ma trận này nhỏ hơn 1, gradient suy giảm theo hàm mũ và tín hiệu học từ các bước xa biến mất, khiến mạng khó học được các phụ thuộc dài hạn.
+
+Mạng \textit{Long Short-Term Memory} (LSTM), do Hochreiter và Schmidhuber đề xuất, khắc phục hạn chế này thông qua cơ chế cổng. Mỗi tế bào LSTM duy trì một trạng thái tế bào $c_t$ -- một ``băng chuyền'' thông tin chạy xuyên suốt chuỗi với rất ít biến đổi tuyến tính -- và sử dụng ba cổng để điều tiết luồng thông tin: cổng quên $f_t$ quyết định thông tin nào trong trạng thái tế bào cần loại bỏ, cổng vào $i_t$ quyết định thông tin mới nào cần ghi vào, và cổng ra $o_t$ quyết định phần nào của trạng thái tế bào được xuất ra. Các phương trình của một tế bào LSTM tại bước thời gian $t$ được biểu diễn như sau:
+\begin{align}
+f_t &= \sigma(W_f \mathbf{x}_t + U_f \mathbf{h}_{t-1} + b_f), \\
+i_t &= \sigma(W_i \mathbf{x}_t + U_i \mathbf{h}_{t-1} + b_i), \\
+\tilde{c}_t &= \tanh(W_c \mathbf{x}_t + U_c \mathbf{h}_{t-1} + b_c), \\
+c_t &= f_t \odot c_{t-1} + i_t \odot \tilde{c}_t, \\
+o_t &= \sigma(W_o \mathbf{x}_t + U_o \mathbf{h}_{t-1} + b_o), \\
+\mathbf{h}_t &= o_t \odot \tanh(c_t),
+\end{align}
+trong đó $\sigma$ là hàm sigmoid, $\odot$ là phép nhân phần tử, $W_\bullet$, $U_\bullet$ là các ma trận trọng số và $b_\bullet$ là các vector độ chệch. Cơ chế cổng quên cho phép mạng chủ động giữ lại hoặc loại bỏ thông tin trong trạng thái tế bào, nhờ đó học được các phụ thuộc dài hạn mà RNN thuần không làm được.
+
+\subsection{BiLSTM: LSTM hai chiều}
+
+Một hạn chế của LSTM một chiều là tại mỗi bước thời gian, mô hình chỉ có thể truy cập thông tin từ quá khứ (các bước trước đó). Mạng \textit{Bidirectional LSTM} (BiLSTM) khắc phục hạn chế này bằng cách xử lý chuỗi đầu vào theo cả hai chiều: một LSTM thuận xử lý chuỗi từ bước đầu đến bước cuối, và một LSTM ngược xử lý chuỗi theo chiều ngược lại. Tại mỗi bước thời gian $t$, trạng thái ẩn của hai chiều được nối lại:
+\begin{equation}
+\mathbf{h}_t = \left[\overrightarrow{\mathbf{h}}_t \; ; \; \overleftarrow{\mathbf{h}}_t\right],
+\end{equation}
+trong đó $\overrightarrow{\mathbf{h}}_t$ là trạng thái ẩn của LSTM thuận và $\overleftarrow{\mathbf{h}}_t$ là trạng thái ẩn của LSTM ngược. Cấu trúc hai chiều này cung cấp cho mô hình một ngữ cảnh phong phú hơn, kết hợp cả thông tin từ quá khứ và tương lai trong chuỗi, do đó nắm bắt được các phụ thuộc thời gian mà mô hình một chiều bỏ lỡ.
+
+Trong bối cảnh bài toán dự báo bỏ học, mỗi người học được biểu diễn bởi một chuỗi vector hành vi theo tuần. Do toàn bộ chuỗi của cửa sổ quan sát được cung cấp đồng thời tại thời điểm dự báo (chế độ ngoại tuyến), việc cho phép mô hình ``nhìn'' cả hai chiều của chuỗi là hợp lý và mang lại lợi thế biểu diễn. Đây là lý do đồ án chọn BiLSTM làm bộ trích xuất chuỗi chủ đạo. Nhiều nghiên cứu thực nghiệm trong các lĩnh vực khác nhau -- từ xử lý ngôn ngữ tự nhiên đến dự báo chuỗi thời gian -- đã xác nhận rằng BiLSTM thường đạt hiệu năng cao hơn các biến thể một chiều khi ngữ cảnh hai phía của một bước thời gian là quan trọng.
+
+Cần lưu ý một điểm quan trọng về tính nhân quả. Trong các ứng dụng dự báo trực tuyến thời gian thực -- nơi mô hình phải dự báo tại tuần $t$ mà chưa biết dữ liệu của tuần $t+1$ -- việc dùng chiều ngược (nhìn về tương lai) sẽ vi phạm tính nhân quả. Tuy nhiên, trong thiết lập của đồ án, dự báo được thực hiện \emph{sau} khi đã thu thập đủ dữ liệu của toàn bộ cửa sổ quan sát $W$; tất cả các tuần từ 1 đến $W$ đều đã xảy ra trong quá khứ tại thời điểm dự báo. Do đó, việc BiLSTM ``nhìn'' từ tuần $W$ ngược về tuần 1 không phải là nhìn về tương lai mà chỉ là đọc lại lịch sử theo chiều ngược -- hoàn toàn hợp lệ. Nguyên tắc chống rò rỉ mà đồ án tuân thủ (không dùng dữ liệu của tuần sau $W$) bảo đảm điều này. Đây là một điểm tinh tế nhưng thiết yếu, phân biệt giữa ``nhìn về tương lai'' (bị cấm) và ``đọc ngược lịch sử đã có'' (được phép).
+
+\subsection{GRU và cơ chế chú ý nhẹ}
+
+\textit{Gated Recurrent Unit} (GRU) là một biến thể đơn giản hóa của LSTM, hợp nhất cổng quên và cổng vào thành một cổng cập nhật duy nhất và lược bỏ trạng thái tế bào riêng biệt. Nhờ ít tham số hơn, GRU thường huấn luyện nhanh hơn LSTM trong khi vẫn giữ được khả năng mô hình hóa phụ thuộc dài hạn ở mức tương đương trên nhiều bài toán. Trong đồ án, bộ trích xuất chuỗi thứ hai -- ký hiệu GRU-AttentionLite -- kết hợp một lớp GRU với một cơ chế chú ý (\textit{attention}) nhẹ, trong đó trọng số chú ý $\alpha_t$ tại mỗi bước thời gian được tính bằng:
+\begin{equation}
+\alpha_t = \frac{\exp(e_t)}{\sum_{\tau=1}^{W} \exp(e_\tau)}, \qquad e_t = \mathbf{v}^\top \tanh(W_a \mathbf{h}_t + b_a),
+\end{equation}
+và biểu diễn chuỗi cuối cùng là tổng có trọng số $\mathbf{c} = \sum_t \alpha_t \mathbf{h}_t$. Cơ chế này cho phép mô hình tập trung vào các tuần mang nhiều thông tin nhất, đồng thời giữ chi phí tính toán thấp hơn BiLSTM. Việc benchmark song song hai bộ trích xuất này cho phép trả lời câu hỏi liệu năng lực biểu diễn bổ sung của BiLSTM có thực sự cần thiết hay không.
+
+Cơ chế chú ý có một lợi ích phụ đáng giá về mặt diễn giải: các trọng số $\alpha_t$ cho biết mô hình ``chú ý'' vào tuần nào nhiều nhất khi đưa ra quyết định. Trong bối cảnh dự báo bỏ học, nếu mô hình gán trọng số cao cho tuần mà mức độ tham gia của người học sụt giảm mạnh, điều đó phù hợp với trực giác rằng sự sụt giảm này là tín hiệu cảnh báo. Như vậy, GRU-AttentionLite không chỉ là một lựa chọn nhẹ hơn về chi phí mà còn cung cấp một cửa sổ nhìn vào lý do đằng sau dự báo -- một tính chất mà BiLSTM thuần khó cung cấp trực tiếp. Đây là một sự đánh đổi thú vị giữa hiệu năng thô (nghiêng về BiLSTM) và khả năng diễn giải (nghiêng về GRU-AttentionLite), và việc benchmark cả hai cho phép người vận hành lựa chọn theo ưu tiên cụ thể của mình.
+
+\subsection{Chiến lược điền giá trị thiếu}
+\label{sec:dienthieu}
+
+Dữ liệu hành vi MOOC thường có nhiều giá trị thiếu: một người học có thể không có bất kỳ tương tác nào trong một tuần nào đó. Cách xử lý giá trị thiếu là một trục thiết kế quan trọng nhưng thường bị bỏ qua. Đồ án benchmark bốn chiến lược:
+
+\begin{itemize}[leftmargin=1.2cm,topsep=3pt]
+  \item \textbf{median} -- điền bằng trung vị của từng đặc trưng, ước lượng trên tập huấn luyện. Đây là phương pháp đơn giản và nhanh nhất, dùng làm chuẩn so sánh.
+  \item \textbf{KNN} -- điền bằng trung bình của $k$ láng giềng gần nhất trong không gian đặc trưng. Phương pháp này khai thác thông tin cục bộ: các người học có hành vi tương tự sẽ được dùng để ước lượng giá trị thiếu cho nhau. Cụ thể, với một mẫu có giá trị thiếu, thuật toán xác định $k$ mẫu gần nhất theo một độ đo khoảng cách (thường là khoảng cách Euclid) trên các chiều có giá trị quan sát được, rồi gán giá trị thiếu bằng trung bình (hoặc trung bình có trọng số theo khoảng cách) của các láng giềng đó. Khoảng cách Euclid bình phương giữa hai mẫu $\mathbf{x}$ và $\mathbf{y}$ trên $d$ chiều quan sát được tính bằng $\sum_{j=1}^{d}(x_j - y_j)^2$. Ưu điểm chính của KNN so với điền trung vị là nó bảo toàn được quan hệ giữa các đặc trưng và không đòi hỏi giả định về phân phối dữ liệu; nhược điểm là chi phí tính khoảng cách tăng theo số mẫu và độ nhạy với điểm ngoại lai. Một nghiên cứu đánh giá có hệ thống cho thấy $k$ trong khoảng nhỏ (ví dụ $k = 3$) thường cho cân bằng tốt giữa sai số điền và bảo toàn cấu trúc dữ liệu. Giá trị $k$ trong đồ án được ước lượng trên tập huấn luyện.
+  \item \textbf{graph\_only} -- điền dựa trên một đồ thị quan hệ giữa người học, lan truyền thông tin qua các cạnh của đồ thị.
+  \item \textbf{graph\_adv} -- biến thể nâng cao của graph\_only, sử dụng cơ chế đối kháng (\textit{adversarial}) để cải thiện chất lượng điền, tương tự cách tiếp cận của Nguyen và cộng sự \cite{Nguyen2025}.
+\end{itemize}
+
+Hai chiến lược dựa trên đồ thị có khả năng biểu diễn mạnh hơn nhưng phải trả giá bằng chi phí dựng đồ thị, có thể đạt $O(n^2)$ với $n$ là số người học. Việc đối sánh bốn chiến lược này một cách có kiểm soát giúp trả lời RQ2: liệu sự phức tạp bổ sung của các phương pháp dựa trên đồ thị có thực sự mang lại lợi ích trong bối cảnh cửa sổ thời gian sớm hay không.
+
+\subsection{Hàm mất mát cho dữ liệu mất cân bằng}
+\label{sec:hammatmat}
+
+Do dữ liệu MOOC mất cân bằng lớp rõ rệt, việc sử dụng hàm mất mát cross-entropy thông thường sẽ khiến mô hình thiên lệch về phía các lớp đa số. Đồ án sử dụng hàm mất mát \textit{Class-Balanced Focal Loss} (CB-Focal) do Cui và cộng sự đề xuất \cite{Cui2019}. Ý tưởng cốt lõi là tái cân bằng đóng góp của mỗi lớp vào hàm mất mát theo \emph{số mẫu hữu hiệu} (\textit{effective number of samples}) thay vì theo số mẫu tuyệt đối, dựa trên nhận định rằng khi số mẫu tăng, thông tin bổ sung của mỗi mẫu mới giảm dần do hiện tượng chồng lấp.
+
+Số mẫu hữu hiệu của lớp có $n_y$ mẫu được định nghĩa là $E_{n_y} = (1 - \beta^{n_y})/(1 - \beta)$, với $\beta \in [0, 1)$ là siêu tham số. Trọng số tái cân bằng của lớp $y$ là:
+\begin{equation}
+\alpha_y = \frac{1 - \beta}{1 - \beta^{n_y}}.
+\end{equation}
+Khi $\beta \to 0$, không có tái cân bằng; khi $\beta \to 1$, trọng số tiệm cận tỷ lệ nghịch với tần suất lớp. Kết hợp trọng số này với thành phần điều biến focal $(1 - p_i^t)^\gamma$ (giúp tập trung vào các mẫu khó), hàm CB-Focal cho bài toán $C$ lớp được viết:
+\begin{equation}
+\mathcal{L}_{\text{CB-Focal}} = -\frac{1 - \beta}{1 - \beta^{n_y}} \sum_{i=1}^{C} (1 - p_i^t)^{\gamma} \log(p_i^t),
+\label{eq:cbfocal}
+\end{equation}
+trong đó $p_i^t$ là xác suất dự báo cho lớp $i$ và $\gamma$ là tham số điều khiển mức độ tập trung vào mẫu khó. Theo khuyến nghị của Cui và cộng sự, các giá trị $\beta = 0{,}999$ và $\gamma$ trong khoảng $[0{,}5; 2]$ thường cho hiệu năng tốt \cite{Cui2019}.
+
+Để khai thác cấu trúc thứ tự của nhãn, đồ án bổ sung một thành phần mất mát thứ bậc (\textit{ordinal}) và kết hợp tuyến tính với CB-Focal:
+\begin{equation}
+\mathcal{L} = \lambda \, \mathcal{L}_{\text{CB-Focal}} + (1 - \lambda) \, \mathcal{L}_{\text{Ord}},
+\label{eq:totalloss}
+\end{equation}
+trong đó $\mathcal{L}_{\text{Ord}}$ phạt thêm theo khoảng cách thứ bậc giữa lớp dự báo và lớp thật, và $\lambda \in [0, 1]$ điều tiết tỷ trọng giữa hai thành phần. Biến thể chỉ dùng CB-Focal được ký hiệu \texttt{cb\_focal}; biến thể kết hợp cả hai được ký hiệu \texttt{cb\_focal\_ordinal}. Hai biến thể này được benchmark song song.
+
+Một cách hiểu trực quan về thành phần thứ bậc: trong bài toán năm mức A/B/C/D/E, một mô hình dự báo lớp C khi nhãn thật là B chỉ sai một bậc, trong khi dự báo lớp E khi nhãn thật là B sai ba bậc. Hàm cross-entropy thông thường phạt cả hai sai lầm như nhau, làm mất thông tin về cấu trúc thứ tự. Thành phần $\mathcal{L}_{\text{Ord}}$ khắc phục điều này bằng cách đưa khoảng cách thứ bậc vào hàm phạt, khuyến khích mô hình khi sai thì sai gần thay vì sai xa. Trong bối cảnh dự báo rủi ro, tính chất này có ý nghĩa thực tiễn: một cảnh báo lệch một mức rủi ro ít gây hại hơn nhiều so với một cảnh báo lệch hoàn toàn về phía đối lập.
+
+\subsection{Hàm softmax và diễn giải xác suất}
+
+Tầng đầu ra của mọi mô hình trong khung sử dụng hàm softmax để chuyển các điểm số thô (logit) thành một phân phối xác suất hợp lệ trên năm lớp:
+\begin{equation}
+\hat{p}_{i,k} = \frac{\exp(z_{i,k})}{\sum_{j=1}^{5} \exp(z_{i,j})},
+\end{equation}
+trong đó $z_{i,k}$ là logit của lớp $k$ cho mẫu $i$. Đầu ra softmax bảo đảm $\sum_k \hat{p}_{i,k} = 1$ và mỗi $\hat{p}_{i,k} \in (0,1)$, cho phép diễn giải như xác suất. Chính nhờ tính chất này mà điểm rủi ro can thiệp $r_i = \hat{p}_{i,D} + \hat{p}_{i,E}$ có ý nghĩa như xác suất người học rơi vào vùng rủi ro cao, và có thể dùng để xếp hạng ưu tiên can thiệp một cách nhất quán. Chất lượng của ước lượng xác suất này -- đo bằng AUC-OVR -- do đó cũng quan trọng không kém quyết định phân loại cuối cùng.
+
+\subsection{Quá khớp, chính quy hóa và tính tổng quát}
+
+Một mô hình học sâu với nhiều tham số có nguy cơ \emph{quá khớp} (\textit{overfitting}): học thuộc lòng dữ liệu huấn luyện thay vì học các quy luật tổng quát, dẫn đến hiệu năng cao trên tập huấn luyện nhưng kém trên dữ liệu mới. Đồ án áp dụng ba kỹ thuật chính quy hóa để giảm nguy cơ này. \textit{Dropout} ngẫu nhiên vô hiệu hóa một tỷ lệ nơ-ron trong quá trình huấn luyện, buộc mạng không phụ thuộc quá mức vào bất kỳ đặc trưng đơn lẻ nào. \textit{Dừng sớm} theo dõi hiệu năng trên tập kiểm định và dừng huấn luyện khi hiệu năng này ngừng cải thiện, ngăn mô hình tiếp tục tối ưu trên nhiễu của tập huấn luyện. \textit{Chuẩn hóa đặc trưng} bảo đảm các đặc trưng ở cùng thang đo, giúp quá trình tối ưu ổn định hơn.
+
+Cần phân biệt giữa \emph{tổng quát trong phân phối} (dữ liệu kiểm tra cùng phân phối với huấn luyện, như trong giao thức chia tập ngẫu nhiên của đồ án) và \emph{tổng quát ngoài phân phối} (dữ liệu từ khóa học hoặc cơ sở khác). Đồ án hiện tại đánh giá loại thứ nhất; Schwerter và cộng sự \cite{Schwerter2026} cảnh báo rằng loại thứ hai khó hơn nhiều, đặc biệt với các mô hình phụ thuộc quan hệ toàn cục. Đây là một lý do nữa khiến các giải pháp cục bộ và nhẹ như KNN được ưa chuộng, và là cơ sở cho hướng nghiên cứu về giao thức hold-out nghiêm ngặt hơn được đề xuất ở phần kết luận.
+
+\subsection{Các chỉ số đánh giá}
+\label{sec:chiso}
+
+Vì dữ liệu mất cân bằng lớp rõ rệt, đồ án báo cáo sáu nhóm chỉ số thay vì chỉ dựa vào độ chính xác. \textit{Accuracy} được giữ làm tham chiếu quen thuộc dù ít có ý nghĩa khi lớp đa số chiếm tỷ trọng lớn. Hai chỉ số chính là:
+\begin{equation}
+\text{Macro-F1} = \frac{1}{K} \sum_{k=1}^{K} F1_k, \qquad
+\text{Weighted-F1} = \sum_{k=1}^{K} \omega_k F1_k,
+\end{equation}
+trong đó $K$ là số lớp, $F1_k$ là điểm F1 của lớp $k$ và $\omega_k$ là trọng số theo tần suất. Macro-F1 đặc biệt quan trọng vì nó phạt nặng khi mô hình phân loại sai các lớp thiểu số. Ngoài ra, $\FoneD$ và $\FoneE$ được báo cáo riêng cho lớp can thiệp (D) và lớp đã rời khóa (E); AUC-OVR (\textit{One-vs-Rest}) đo khả năng phân biệt đa lớp ở mức xác suất. Thời gian chạy được đo bằng đồng hồ bao quanh giai đoạn huấn luyện (không tính ETL), và số tham số mô hình được dùng làm chỉ báo độ phức tạp.
+
+Để hiểu rõ ý nghĩa của các chỉ số trên, cần nhắc lại các đại lượng nền tảng từ ma trận nhầm lẫn. Với một lớp $k$, gọi $TP_k$, $FP_k$, $FN_k$ lần lượt là số dự báo đúng dương, dương giả và âm giả. Khi đó:
+\begin{equation}
+\text{Precision}_k = \frac{TP_k}{TP_k + FP_k}, \quad
+\text{Recall}_k = \frac{TP_k}{TP_k + FN_k}, \quad
+F1_k = \frac{2 \cdot \text{Precision}_k \cdot \text{Recall}_k}{\text{Precision}_k + \text{Recall}_k}.
+\end{equation}
+Trong bối cảnh dự báo bỏ học, $\text{Recall}_D$ -- tỷ lệ phát hiện đúng nhóm rủi ro cao -- có ý nghĩa thực tiễn lớn, vì bỏ sót một người học cần can thiệp (âm giả) thường tốn kém hơn một cảnh báo nhầm (dương giả). $F1_D$ tổng hợp cả hai khía cạnh này thành một chỉ số duy nhất, do đó được chọn làm một thành phần trong hàm Score. Sự khác biệt giữa Accuracy và Macro-F1 cũng đáng lưu ý: trên một bộ dữ liệu mà lớp D chiếm hơn 64\%, một mô hình ``ngây thơ'' luôn dự báo lớp D đã có thể đạt Accuracy trên 64\% mà không hề có khả năng phân biệt; trong khi đó Macro-F1 của mô hình ngây thơ này sẽ rất thấp vì các lớp còn lại đều có $F1 = 0$. Đây chính là lý do đồ án ưu tiên Macro-F1 làm chỉ số chính.
+
+\subsection{Về tính có ý nghĩa thống kê và khả năng tái lập}
+
+Một điểm phương pháp luận quan trọng của đồ án là bảo đảm các so sánh giữa các hệ thống có ý nghĩa thống kê. Điều này đạt được thông qua ba cơ chế. \textit{Thứ nhất}, mọi hệ thống được đánh giá trên \emph{cùng một cohort} 100.409 cặp, \emph{cùng một split} 8:1:1 và \emph{cùng một hạt giống} ngẫu nhiên 42. Nhờ đó, sự khác biệt về hiệu năng giữa các hệ thống phản ánh khác biệt thực sự về năng lực mô hình, không phải khác biệt ngẫu nhiên do dữ liệu hay cách chia tập. \textit{Thứ hai}, quy mô cohort lớn (hàng trăm nghìn mẫu) làm giảm phương sai của các ước lượng hiệu năng, khiến các khoảng cách quan sát được (ví dụ 9,1\% Macro-F1) đủ lớn để tin cậy. \textit{Thứ ba}, việc cố định phần cứng bảo đảm các so sánh về thời gian chạy là công bằng.
+
+So với nhiều nghiên cứu trước vốn so sánh các mô hình được đánh giá trên các dữ liệu, giao thức và phần cứng khác nhau, cách tiếp cận này của đồ án đưa việc đối sánh lên một mức độ chặt chẽ cao hơn. Đây chính là ý nghĩa cốt lõi của cụm từ ``benchmark thống nhất'' trong tên khung: không chỉ chạy nhiều mô hình, mà chạy chúng trong một điều kiện được kiểm soát nghiêm ngặt để mọi khác biệt quan sát được đều có thể quy về khác biệt về thiết kế mô hình.
+
+\subsection{Các mô hình baseline học máy truyền thống}
+Để bảo đảm tính tự chứa của đồ án, mục này tóm lược ngắn gọn cơ sở của các họ mô hình baseline được tái hiện. \textit{Cây quyết định} phân hoạch không gian đặc trưng theo các ngưỡng được chọn để tối đa hóa độ thuần khiết của các nút lá. \textit{Rừng ngẫu nhiên} (RF) kết hợp nhiều cây quyết định huấn luyện trên các tập con dữ liệu và đặc trưng được lấy mẫu ngẫu nhiên, sau đó tổng hợp dự báo bằng bỏ phiếu; cơ chế này giảm phương sai và chống quá khớp hiệu quả. \textit{Gradient Boosting} và biến thể tối ưu hóa của nó là \textit{XGBoost} xây dựng các cây tuần tự, trong đó mỗi cây mới được huấn luyện để sửa sai số phần dư của tổ hợp các cây trước; XGBoost bổ sung chính quy hóa và nhiều tối ưu hóa kỹ thuật giúp nó trở thành một trong những mô hình mạnh nhất trên dữ liệu dạng bảng. \textit{AdaBoost} là một thuật toán boosting sớm hơn, tăng trọng số cho các mẫu bị phân loại sai ở vòng trước. Các mô hình họ cây này có chung đặc điểm: chúng hoạt động trên các đặc trưng đã được \emph{tổng hợp} (aggregated) thành dạng bảng, do đó không khai thác trực tiếp cấu trúc tuần tự của chuỗi hành vi -- một đặc điểm sẽ giải thích vì sao chúng ít hưởng lợi từ cửa sổ quan sát dài hơn, như sẽ thấy trong Chương~\ref{ch:ketqua}.
+
+\subsection{Đặc điểm dữ liệu MOOC và tín hiệu hành vi theo tuần}
+
+Dữ liệu MOOC có ba đặc điểm chi phối thiết kế mô hình. \textit{Thứ nhất, tính chuỗi thời gian.} Hành vi học tập diễn ra theo tuần, với các tín hiệu như thời lượng xem video, số lần thử bài tập thay đổi theo tiến trình khóa học; những thay đổi này (ví dụ giảm dần mức độ tham gia) thường là dấu hiệu cảnh báo sớm của việc rời bỏ. \textit{Thứ hai, tính mất cân bằng.} Như đã phân tích, nhóm rủi ro cao và bỏ học chiếm tỷ trọng áp đảo. \textit{Thứ ba, tính thưa và thiếu.} Nhiều người học không có tương tác trong một số tuần, tạo ra giá trị thiếu mà cách xử lý ảnh hưởng trực tiếp đến chất lượng dự báo. Ba đặc điểm này lần lượt biện minh cho ba lựa chọn thiết kế cốt lõi của khung: bộ trích xuất chuỗi thời gian (cho đặc điểm thứ nhất), hàm mất mát tái cân bằng (cho đặc điểm thứ hai), và việc benchmark các chiến lược điền giá trị thiếu (cho đặc điểm thứ ba).
+
+\section{Phát biểu và mô hình hóa bài toán}
+\label{sec:phatbieu}
+
+Khung EarlyRisk-MOOC hướng đến ba yêu cầu đồng thời: (i) phát hiện sớm, chỉ với 1, 2 hoặc 4 tuần đầu; (ii) hiệu năng dự báo cao, đặc biệt ở lớp can thiệp; và (iii) chi phí vận hành chấp nhận được.
+
+\textit{Cửa sổ quan sát} $W$ là số tuần kể từ khi người học đăng ký mà mô hình được phép quan sát; trong nghiên cứu này $W \in \{1, 2, 4\}$. \textit{Hành vi học tập theo tuần} là vector số $\bvec_i^{(t)} \in \mathbb{R}^9$ mô tả mức độ tham gia của người học $i$ trong tuần $t$, gồm chín thành phần: tổng thời gian xem video, số lượt xem video, số lần tua lại, tổng thời lượng tua lại, chương video trung bình đã xem, số lần thử bài tập, tổng điểm bài tập, số câu trả lời đúng và số câu hoàn thành. \textit{Đặc trưng tĩnh} $\svec_i \in \mathbb{R}^{16}$ bao gồm thông tin nhân khẩu học và thuộc tính khóa học, có sẵn ngay tại thời điểm đăng ký.
+
+Cho người học $i$ tại cửa sổ $W$, đầu vào là:
+\begin{equation}
+X_i^{(W)} = \left(\svec_i, \bvec_i^{(1)}, \dots, \bvec_i^{(W)}\right).
+\end{equation}
+Đầu ra mục tiêu là nhãn rủi ro có thứ tự $y_i \in \{A, B, C, D, E\}$ với $A \succ B \succ C \succ D \succ E$, trong đó:
+\begin{itemize}[leftmargin=1.2cm,topsep=2pt,itemsep=0pt]
+  \item \textbf{A}: hoàn thành rất tốt;
+  \item \textbf{B}: tốt;
+  \item \textbf{C}: trung bình;
+  \item \textbf{D}: đang hoạt động, rủi ro cao -- \emph{vùng can thiệp chính};
+  \item \textbf{E}: không hoàn thành / bỏ học.
+\end{itemize}
+
+Mô hình cần học ánh xạ $f_\theta : X_i^{(W)} \mapsto \phat_i \in [0,1]^5$ với $\sum_k \hat{p}_{i,k} = 1$. Điểm rủi ro can thiệp được định nghĩa là $r_i = \hat{p}_{i,D} + \hat{p}_{i,E}$, dùng để xếp hạng ưu tiên can thiệp. Hàm mục tiêu đa tiêu chí để chọn cấu hình vận hành là:
+\begin{equation}
+\text{Score}(W, m, \ell) = \alpha\, \text{MacroF1} + \beta\, \FoneD + \gamma\, \text{AUC-OVR} - \delta \log(1 + \text{Runtime}),
+\label{eq:score}
+\end{equation}
+trong đó $m$ là cấu hình mô hình, $\ell$ là hàm mất mát, và $\alpha, \beta, \gamma, \delta$ là các trọng số phản ánh ưu tiên của người vận hành.
+
+\clearpage
+
+\section{Kiến trúc khung EarlyRisk-MOOC}
+\label{sec:kientruc}
+
+\subsection{Ba nguyên tắc thiết kế}
+
+Khung EarlyRisk-MOOC dựa trên ba nguyên tắc thiết kế xuyên suốt.
+
+\textit{Nguyên tắc thứ nhất -- đặt mục tiêu cảnh báo sớm lên trước.} Mọi mô hình đều phải đi qua cả ba mức W1/W2/W4, thay vì chỉ báo cáo kết quả tốt nhất ở một cửa sổ cố định. Nguyên tắc này buộc mọi so sánh phải được đặt trong bối cảnh đánh đổi giữa thời điểm cảnh báo và chất lượng dự báo.
+
+\textit{Nguyên tắc thứ hai -- ngăn rò rỉ thông tin tường minh.} Mọi đặc trưng chỉ được phép sử dụng dữ liệu đến tuần $W$, và mọi phép biến đổi (chuẩn hóa, điền giá trị thiếu) phải được khớp trên tập huấn luyện rồi mới áp sang tập kiểm định và kiểm tra:
+\begin{equation}
+\forall t > W : \bvec_i^{(t)} \notin X_i^{(W)}, \qquad \phi = \text{fit on train}.
+\end{equation}
+Nguyên tắc này bảo đảm rằng kết quả báo cáo phản ánh đúng năng lực dự báo trong điều kiện triển khai thực tế, không bị thổi phồng do rò rỉ thông tin từ tương lai.
+
+\textit{Nguyên tắc thứ ba -- coi các trục thiết kế phụ trợ là biến thí nghiệm.} Chiến lược điền giá trị thiếu (median, KNN, graph\_only, graph\_adv), bộ trích xuất chuỗi (BiLSTM, GRU-AttentionLite) và hàm mất mát (cb\_focal, cb\_focal\_ordinal) đều được benchmark song song trên cùng giao thức, thay vì cố định một lựa chọn duy nhất. Tổ hợp $3 \times 4 \times 2 \times 2 = 48$ cấu hình tạo nên không gian thí nghiệm nội tại của khung.
+
+\subsection{Năm tầng xử lý}
+
+Khung EarlyRisk-MOOC gồm năm tầng, được minh họa trong Hình~\ref{fig:kientruc}.
+
+\textit{Tầng 1 -- Lọc cohort.} Từ nhật ký thô của MOOCCubeX (khoảng 296 triệu sự kiện), người học được giữ lại nếu có ít nhất một tương tác hợp lệ trong 4 tuần đầu và tổng tương tác đạt ngưỡng tối thiểu. Mỗi cặp $(i, c)$ (người học--khóa học) được coi là một mẫu độc lập, nên một người học có thể xuất hiện nhiều lần với các nhãn khác nhau cho từng khóa. Kết quả là cohort thực nghiệm gồm 100.409 cặp.
+
+\textit{Tầng 2 -- Trích xuất đặc trưng và tạo cửa sổ.} Tầng này trích xuất hai nhóm biến: chuỗi đặc trưng hành vi $\bvec_i^{(t)}$ (9 thành phần) và đặc trưng tĩnh $\svec_i$ (16 thành phần). Ba cửa sổ W1, W2, W4 được tạo theo nguyên tắc chống rò rỉ. Dữ liệu được chia tập theo tỷ lệ 8:1:1, phân tầng theo nhãn 5 lớp, với hạt giống ngẫu nhiên cố định 42.
+
+\textit{Tầng 3 -- Điền giá trị thiếu.} Áp dụng phép biến đổi $\tilde{\bvec}_i^{(t)} = \phi(\bvec_i^{(t)})$ với bốn lựa chọn $\phi$ được benchmark song song như đã mô tả ở Mục~\ref{sec:dienthieu}.
+
+\textit{Tầng 4 -- Trích xuất chuỗi và huấn luyện.} Hai bộ trích xuất chuỗi $g_\phi$ (BiLSTM và GRU-AttentionLite) được huấn luyện với hàm mất mát kết hợp theo công thức~\eqref{eq:totalloss}.
+
+\textit{Tầng 5 -- Sinh xác suất và chọn điểm vận hành.} Tầng cuối sinh phân phối xác suất $\phat_i \in [0,1]^5$ qua hàm softmax, tính điểm rủi ro can thiệp $r_i = \hat{p}_{i,D} + \hat{p}_{i,E}$, đánh giá theo bộ chỉ số và chọn điểm vận hành qua hàm Score ở công thức~\eqref{eq:score}.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=0.55cm and 0.4cm,
+  box/.style={draw,rounded corners=2pt,align=center,minimum height=0.85cm,font=\footnotesize,inner sep=4pt,fill=gray!5},
+  tier/.style={font=\footnotesize\itshape,gray!60!black},
+  sub/.style={draw,rounded corners=1pt,align=center,minimum height=0.6cm,font=\scriptsize,inner sep=3pt,fill=blue!4},
+  arr/.style={-{Stealth[length=2mm]},thick,gray!60!black}
+]
+% Tier 1
+\node[box,minimum width=6.5cm] (raw) {Nhật ký thô MOOCCubeX ($\approx$296M sự kiện)};
+\node[box,minimum width=6.5cm,below=of raw] (filter) {Lọc active learners $\rightarrow$ 100.409 cặp $(i,c)$};
+\node[tier,right=0.6cm of filter] {Tầng 1};
+% Tier 2
+\node[box,minimum width=6.5cm,below=of filter] (feat) {Trích xuất 9 đặc trưng tuần + 16 đặc trưng tĩnh\\Tạo cửa sổ W1/W2/W4 (chống rò rỉ) -- Chia tập 8:1:1, seed=42};
+\node[tier,right=0.6cm of feat] {Tầng 2};
+% Tier 3
+\node[sub,below left=0.6cm and -3.0cm of feat] (m1) {median};
+\node[sub,right=of m1] (m2) {KNN};
+\node[sub,right=of m2] (m3) {graph\_only};
+\node[sub,right=of m3] (m4) {graph\_adv};
+\node[tier] at ($(m4)+(1.7cm,0)$) {Tầng 3};
+% Tier 4
+\node[box,minimum width=6.5cm,below=0.6cm of m2.south east,xshift=0.2cm] (enc) {BiLSTM \;|\; GRU-AttentionLite\\Loss: cb\_focal \;|\; cb\_focal\_ordinal};
+\node[tier,right=0.6cm of enc] {Tầng 4};
+% Tier 5
+\node[box,minimum width=6.5cm,below=of enc] (out) {$\hat{\mathbf{p}}_i \in [0,1]^5$ softmax A/B/C/D/E\\Đánh giá: Acc, MacroF1, $F1_D$, $F1_E$, AUC-OVR\\Score$(W,m,\ell)$ $\rightarrow$ chọn điểm vận hành};
+\node[tier,right=0.6cm of out] {Tầng 5};
+% arrows
+\draw[arr] (raw) -- (filter);
+\draw[arr] (filter) -- (feat);
+\draw[arr] (feat.south) -- ($(m1.north)!0.5!(m4.north)+(0,0.2cm)$);
+\draw[arr] ($(m1.south)!0.5!(m4.south)$) -- (enc.north);
+\draw[arr] (enc) -- (out);
+\end{tikzpicture}
+\caption{Kiến trúc khung EarlyRisk-MOOC với năm tầng. Tầng 1 lọc người học có hoạt động thực sự từ MOOCCubeX. Tầng 2 trích xuất đặc trưng và tạo cửa sổ chống rò rỉ. Tầng 3 đối sánh bốn chiến lược điền giá trị thiếu. Tầng 4 huấn luyện hai bộ trích xuất chuỗi với hai hàm mất mát. Tầng 5 sinh xác suất và điểm rủi ro phục vụ xếp hạng can thiệp.}
+\label{fig:kientruc}
+\end{figure}
+
+\subsection{Quy trình huấn luyện và tối ưu hóa}
+
+Mỗi cấu hình trong số 48 tổ hợp được huấn luyện theo cùng một quy trình để bảo đảm tính công bằng. Trọng số mô hình được tối ưu bằng thuật toán Adam với tốc độ học được điều chỉnh theo lịch giảm dần; quá trình huấn luyện sử dụng dừng sớm (\textit{early stopping}) dựa trên Macro-F1 trên tập kiểm định để tránh quá khớp. Các đặc trưng số được chuẩn hóa về cùng thang đo, với tham số chuẩn hóa được khớp \emph{chỉ} trên tập huấn luyện rồi áp sang tập kiểm định và kiểm tra -- tuân thủ nguyên tắc chống rò rỉ đã nêu. Việc chia tập theo tỷ lệ 8:1:1 được thực hiện ở mức cặp $(i, c)$ và phân tầng theo nhãn năm lớp, bảo đảm rằng phân phối lớp trong ba tập con là nhất quán, điều đặc biệt quan trọng với các lớp thiểu số như A.
+
+Để bảo đảm khả năng tái lập, mọi nguồn ngẫu nhiên (khởi tạo trọng số, xáo trộn dữ liệu, lấy mẫu trong RF/XGBoost) đều được cố định bằng cùng một hạt giống 42. Toàn bộ thực nghiệm chạy trên cùng một cấu hình phần cứng (Microsoft Fabric Spark pool, 8 vCPU, 56 GB RAM, không GPU), nên các so sánh về thời gian chạy phản ánh đúng chi phí tương đối giữa các cấu hình. Việc cố định phần cứng là một yếu tố thường bị bỏ qua trong các nghiên cứu trước nhưng lại thiết yếu để các con số runtime có thể so sánh được.
+
+\subsection{Phân tích độ phức tạp tính toán}
+
+Chi phí tính toán của khung đến từ ba nguồn chính. \textit{Tầng điền giá trị thiếu} có chi phí phụ thuộc vào chiến lược: median là $O(n)$, KNN là $O(n^2)$ trong trường hợp exact (do phải tính khoảng cách giữa mọi cặp), và các phương pháp đồ thị cũng đạt $O(n^2)$ do phải dựng ma trận kề. \textit{Tầng trích xuất chuỗi} có chi phí tỷ lệ với độ dài cửa sổ $W$ và số tham số mô hình; BiLSTM tốn gấp đôi GRU một chiều do xử lý hai chiều. \textit{Tầng đánh giá} có chi phí không đáng kể. Phân tích này lý giải vì sao mặc dù KNN có độ phức tạp lý thuyết $O(n^2)$ giống các phương pháp đồ thị, trên thực tế nó vẫn nhanh hơn đáng kể vì hằng số ẩn nhỏ hơn (không cần huấn luyện mô hình đồ thị đối kháng). Trong bối cảnh triển khai quy mô rất lớn, đây là một trong những lý do khiến approximate-KNN trở thành một hướng tối ưu hóa đáng quan tâm, như sẽ bàn ở phần giới hạn.
+
+\subsection{Chi tiết cấu hình các mô hình}
+
+Để bảo đảm tính tái lập và minh bạch, mục này mô tả chi tiết cấu hình của hai bộ trích xuất chuỗi chính. \textit{Bộ trích xuất BiLSTM} gồm một lớp nhúng đầu vào ánh xạ vector hành vi 9 chiều mỗi tuần vào không gian ẩn, tiếp theo là một hoặc hai lớp BiLSTM với kích thước ẩn được chọn cân bằng giữa năng lực biểu diễn và chi phí. Đầu ra của lớp BiLSTM cuối được nối với vector đặc trưng tĩnh đã chuẩn hóa, đưa qua một lớp kết nối đầy đủ và cuối cùng là một lớp softmax sinh phân phối xác suất trên năm lớp. Cơ chế dropout được áp dụng giữa các lớp để chính quy hóa, một thực hành cần thiết khi huấn luyện mạng hai chiều vốn có gấp đôi số tham số so với LSTM một chiều.
+
+\textit{Bộ trích xuất GRU-AttentionLite} thay lớp BiLSTM bằng một lớp GRU một chiều, sau đó áp một lớp chú ý nhẹ tổng hợp các trạng thái ẩn theo trọng số học được. Thiết kế này có ít tham số hơn BiLSTM, do đó huấn luyện nhanh hơn khoảng 10\%, với chi phí là khả năng biểu diễn ngữ cảnh hai chiều bị hạn chế. Việc đặt hai bộ trích xuất này cạnh nhau trong cùng giao thức cho phép cô lập đóng góp của tính hai chiều: nếu BiLSTM vượt trội đáng kể, điều đó xác nhận rằng ngữ cảnh hai phía của chuỗi hành vi là có giá trị; nếu chênh lệch nhỏ, GRU-AttentionLite trở thành lựa chọn hợp lý hơn về chi phí.
+
+Đối với các baseline, cấu hình được giữ trung thành với mô tả gốc của từng công trình ở mức tối đa có thể, chỉ điều chỉnh đầu ra từ nhị phân sang năm lớp và thống nhất bộ đặc trưng đầu vào, như đã liệt kê chi tiết ở Bảng~\ref{tab:baseline} trong Chương~\ref{ch:ketqua}. Nguyên tắc xuyên suốt là: mọi điều chỉnh đều nhằm mục đích duy nhất là làm cho baseline tương thích với giao thức năm lớp, không nhằm làm suy yếu hay tăng cường baseline một cách thiên lệch.
+
+\section{Tổng hợp quy trình thành thuật toán}
+\label{sec:thuattoan}
+
+Để tổng hợp các thành phần đã trình bày thành một bức tranh thực thi đầy đủ, Thuật toán~\ref{alg:pipeline} mô tả toàn bộ quy trình benchmark của khung EarlyRisk-MOOC dưới dạng mã giả. Thuật toán làm rõ thứ tự thực thi và đặc biệt là vị trí của các điểm kiểm soát chống rò rỉ thông tin.
+
+\begin{algorithm}[H]
+\caption{Quy trình benchmark EarlyRisk-MOOC}
+\label{alg:pipeline}
+\SetKwInOut{Input}{Đầu vào}
+\SetKwInOut{Output}{Đầu ra}
+\Input{Nhật ký thô MOOCCubeX; tập cửa sổ $\mathcal{W} = \{1,2,4\}$; tập chiến lược điền $\Phi$; tập bộ trích xuất $\mathcal{G}$; tập hàm mất mát $\mathcal{L}$}
+\Output{Bảng kết quả cho mọi cấu hình; điểm vận hành tối ưu}
+\BlankLine
+Lọc cohort: giữ các cặp $(i,c)$ có hoạt động hợp lệ trong 4 tuần $\rightarrow$ $\mathcal{D}$\;
+Gán nhãn 5 mức A/B/C/D/E theo quy tắc lai cho mỗi $(i,c) \in \mathcal{D}$\;
+Chia $\mathcal{D}$ thành $\mathcal{D}_{tr}, \mathcal{D}_{val}, \mathcal{D}_{te}$ theo tỷ lệ 8:1:1, phân tầng, seed=42\;
+\ForEach{$W \in \mathcal{W}$}{
+  Tạo đầu vào $X_i^{(W)} = (\mathbf{s}_i, \mathbf{b}_i^{(1)}, \dots, \mathbf{b}_i^{(W)})$, loại bỏ mọi $\mathbf{b}_i^{(t)}$ với $t>W$\;
+  \ForEach{$\phi \in \Phi$}{
+    Khớp $\phi$ \textbf{chỉ} trên $\mathcal{D}_{tr}$; áp $\phi$ lên cả ba tập $\rightarrow$ $\tilde{X}$\;
+    \ForEach{$g \in \mathcal{G}$, $\ell \in \mathcal{L}$}{
+      Huấn luyện $f_\theta = (g, \ell)$ trên $\tilde{X}(\mathcal{D}_{tr})$ với dừng sớm theo Macro-F1 trên $\mathcal{D}_{val}$\;
+      Đánh giá trên $\mathcal{D}_{te}$: Acc, MacroF1, $F1_D$, $F1_E$, AUC-OVR, Runtime\;
+      Ghi kết quả cấu hình $(W, \phi, g, \ell)$\;
+    }
+  }
+}
+Tính Score$(W,m,\ell)$ cho mọi cấu hình theo công thức~\eqref{eq:score}\;
+\Return{cấu hình có Score cao nhất và toàn bộ bảng kết quả}\;
+\end{algorithm}
+
+Điểm cốt yếu của thuật toán nằm ở hai dòng kiểm soát rò rỉ: việc loại bỏ mọi đặc trưng của tuần sau $W$ (bảo đảm tính nhân quả thời gian) và việc khớp phép biến đổi $\phi$ chỉ trên tập huấn luyện (bảo đảm không rò rỉ thống kê từ tập kiểm tra). Hai điểm kiểm soát này là điều kiện cần để kết quả benchmark phản ánh đúng năng lực triển khai thực tế.
+
+
+
+\clearpage

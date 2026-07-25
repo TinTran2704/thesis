@@ -1,0 +1,47 @@
+% ===================== KẾT LUẬN VÀ KIẾN NGHỊ =======================
+\chapter*{KẾT LUẬN VÀ KIẾN NGHỊ}
+\addcontentsline{toc}{chapter}{KẾT LUẬN VÀ KIẾN NGHỊ}
+\markboth{KẾT LUẬN VÀ KIẾN NGHỊ}{KẾT LUẬN VÀ KIẾN NGHỊ}
+
+\section*{1. Kết luận}
+\addcontentsline{toc}{section}{Kết luận}
+
+Đồ án này trình bày \textit{EarlyRisk-MOOC}, một khung dự báo sớm rủi ro bỏ học trong MOOC với trọng tâm là khả năng phát hiện sớm, tính nhất quán của benchmark và khả năng triển khai. Bài toán được mô hình hóa dưới dạng phân loại nhãn rủi ro có thứ tự A/B/C/D/E, cho phép không chỉ dự báo trạng thái hoàn thành/không hoàn thành mà còn nhận diện nhóm người học có nguy cơ cao nhưng vẫn còn khả năng can thiệp.
+
+Thực nghiệm trên bộ dữ liệu MOOCCubeX với 100.409 cặp người học--khóa học cho thấy cấu hình W2 + KNN + BiLSTM đạt Macro-F1 = 0,9499, giữ được 99,4\% chất lượng của W4 trong khi giảm 12,9\% thời gian chạy; vượt baseline tốt nhất 9,1\% điểm Macro-F1 tại W2 và đặc biệt mạnh ở lớp can thiệp D với $\FoneD = 0{,}9772$.
+
+Những phát hiện mới chính của đồ án, được trình bày một cách lượng hóa và khách quan, gồm:
+
+\begin{enumerate}[label=(\roman*),leftmargin=1.2cm,topsep=3pt]
+  \item \textbf{Thiết kế bài toán nhãn 5 mức thay thế nhãn nhị phân} để bảo toàn tín hiệu can thiệp -- phân biệt rõ nhóm ``đang hoạt động nhưng rủi ro cao'' với nhóm ``đã rời khóa''.
+  \item \textbf{Khung benchmark đa cửa sổ thống nhất} trên cùng cohort, cùng quy tắc nhãn và cùng giao thức chia tập cho mọi cấu hình, lượng hóa được đánh đổi giữa thời điểm cảnh báo và chất lượng dự báo.
+  \item \textbf{Tái hiện sáu công trình tiêu biểu} trên cùng giao thức, làm cơ sở cho so sánh có ý nghĩa thống kê; phát hiện rằng các mô hình chuỗi thời gian hưởng lợi rõ rệt từ cửa sổ dài hơn trong khi các mô hình tabular thì không.
+  \item \textbf{Định danh điểm vận hành cân bằng W2 + KNN + BiLSTM}, đồng thời chỉ ra rằng chiến lược điền giá trị thiếu KNN cục bộ vượt các phương pháp toàn cục dựa trên đồ thị trong bối cảnh cửa sổ sớm.
+\end{enumerate}
+
+\section*{2. Tổng hợp trả lời các câu hỏi nghiên cứu}
+\addcontentsline{toc}{section}{Tổng hợp trả lời các câu hỏi nghiên cứu}
+
+Ba câu hỏi nghiên cứu đặt ra ở phần Mở đầu đã được trả lời đầy đủ qua thực nghiệm.
+
+\textit{RQ1 -- về ảnh hưởng của cửa sổ quan sát.} Cửa sổ quan sát có ảnh hưởng khác nhau tùy họ mô hình: các mô hình chuỗi thời gian hưởng lợi rõ rệt khi cửa sổ kéo dài (EarlyRisk-MOOC tăng $+0{,}1096$ Macro-F1 từ W1 đến W4), trong khi các mô hình tabular gần như không đổi. Tồn tại một điểm vận hành cân bằng là W2, giữ 99,4\% chất lượng của W4 với chi phí thấp hơn 12,9\% và thời điểm cảnh báo sớm hơn hai tuần.
+
+\textit{RQ2 -- về chiến lược điền giá trị thiếu.} Trong 48 cấu hình, thứ hạng nhất quán là KNN $>$ graph\_adv $>$ graph\_only $>$ median. Chiến lược láng giềng cục bộ (KNN) vượt các phương pháp toàn cục dựa trên đồ thị trong bối cảnh cửa sổ sớm, cho thấy sự phức tạp bổ sung của phương pháp đồ thị không được đền đáp tương xứng khi tín hiệu thời gian còn ngắn.
+
+\textit{RQ3 -- về khả năng phát hiện lớp can thiệp.} Khung đề xuất cải thiện đáng kể khả năng phát hiện nhóm cần can thiệp: $\FoneD = 0{,}9772$ tại W2 vượt các baseline tốt nhất từ 0,12 đến 0,18 điểm tuyệt đối. Đây là điểm khác biệt chức năng quan trọng nhất, vì lớp D chính là vùng mà can thiệp còn có ý nghĩa.
+
+\section*{3. Kiến nghị và hướng nghiên cứu tiếp theo}
+\addcontentsline{toc}{section}{Kiến nghị và hướng nghiên cứu tiếp theo}
+
+Trên cơ sở các giới hạn đã phân tích ở Mục~\ref{sec:gioihan}, đồ án đề xuất bốn hướng nghiên cứu tiếp theo:
+
+\begin{enumerate}[label=\arabic*.,leftmargin=1.2cm,topsep=3pt]
+  \item \textbf{Mở rộng cohort và đánh giá tính tổng quát.} Mở rộng từ 100.409 cặp lên toàn bộ MOOCCubeX (3,3 triệu người học), kiểm chứng song song trên OULAD, và áp dụng giao thức hold-out theo khóa học hoặc theo cơ sở.
+  \item \textbf{Tối ưu chi phí tính toán ở quy mô lớn.} Đánh giá approximate-KNN và các bộ trích xuất chuỗi nhẹ hơn (TCN, attention thưa) để giữ chi phí tăng tuyến tính khi cohort tăng lên hàng triệu cặp.
+  \item \textbf{Tích hợp meta-history của người học.} Khai thác thứ tự đăng ký các khóa học như một tín hiệu bổ sung, theo gợi ý từ meta-transfer learning.
+  \item \textbf{Tích hợp dự báo với chính sách can thiệp.} Chuyển từ bài toán dự báo sang một hệ thống hỗ trợ học tập hoàn chỉnh, đánh giá hiệu ứng can thiệp thực tế qua thử nghiệm A/B hoặc tựa thực nghiệm.
+\end{enumerate}
+
+Tổng kết lại, đồ án không chỉ đề xuất một mô hình đạt hiệu năng cao mà còn đóng góp một \emph{quan điểm thiết kế}: thay vì tìm mô hình tốt nhất ở một điểm vận hành duy nhất, cần đối sánh có hệ thống đánh đổi giữa thời điểm cảnh báo, chất lượng dự báo và chi phí triển khai trên cùng một mặt bằng thực nghiệm. Quan điểm này có thể được áp dụng rộng rãi cho các bài toán dự báo sớm khác trong lĩnh vực phân tích học tập.
+
+\clearpage

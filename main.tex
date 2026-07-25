@@ -1,0 +1,141 @@
+% =====================================================================
+%  ĐỒ ÁN THẠC SĨ — Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM
+%  Trình bày theo QĐ số 199/QĐ-KHTN ngày 09/02/2023
+%  Engine: XeLaTeX  (Build: XeLaTeX -> BibTeX -> XeLaTeX x2)
+% =====================================================================
+\documentclass[13pt,a4paper,oneside]{report}
+
+% ---------- Ngôn ngữ & font (XeLaTeX) --------------------------------
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+\setotherlanguage{english}
+
+% Times New Roman. Trên máy bạn (Windows/Mac có sẵn Times New Roman) dòng
+% dưới sẽ chạy thẳng. Nếu báo lỗi "font not found", đổi sang dòng fallback.
+\setmainfont{Times New Roman}
+% --- FALLBACK nếu không có Times New Roman (bỏ % ở đầu 1 trong 2 dòng):
+% \setmainfont{TeX Gyre Termes}     % thay thế gần giống Times, có sẵn TeX Live
+% \setmainfont{Liberation Serif}    % thay thế metric-compatible với Times
+\setmonofont{Consolas}[Scale=0.85]
+
+% ---------- Canh lề theo QĐ 199 -------------------------------------
+% Trên 3.5cm; Dưới 3cm; Trái 3.5cm; Phải 2cm
+\usepackage[a4paper,top=3.5cm,bottom=3cm,left=3.5cm,right=2cm]{geometry}
+
+% ---------- Giãn dòng 1.5 -------------------------------------------
+\usepackage{setspace}
+\onehalfspacing
+
+% ---------- Các gói cơ bản ------------------------------------------
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,calc,fit,backgrounds}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+% ---------- THÔNG TIN ĐỊNH DANH (nạp sớm để dùng cho hyperref) ------
+\usepackage{ifthen}
+\input{frontmatter/00-thongtin}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={EarlyRisk-MOOC},
+  pdfauthor={\hvchname},
+  colorlinks=false,
+  linkbordercolor=white,
+  citebordercolor=white,
+  urlbordercolor=white
+}
+
+% ---------- Đánh số trang ở giữa, phía cuối trang -------------------
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+\pagestyle{plain}
+
+% ---------- Định dạng tiêu đề chương/mục ----------------------------
+\usepackage{titlesec}
+\titleformat{\chapter}[block]
+  {\normalfont\large\bfseries\centering}
+  {Chương \thechapter.}{0.6em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{18pt}
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\itshape}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}{\thesubsubsection}{0.6em}{}
+
+% Caption: đầu đề bảng phía trên, đầu đề hình phía dưới (xử lý khi đặt)
+\captionsetup{labelsep=period,font=small,labelfont=bf}
+\captionsetup[table]{position=above,skip=4pt}
+\captionsetup[figure]{position=below,skip=6pt}
+
+% ---------- Lệnh tiện ích cho ký hiệu toán --------------------------
+\newcommand{\bvec}{\mathbf{b}}
+\newcommand{\svec}{\mathbf{s}}
+\newcommand{\phat}{\hat{\mathbf{p}}}
+\DeclareMathOperator{\softmax}{softmax}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\FoneD}{\ensuremath{F1_{D}}}
+\newcommand{\FoneE}{\ensuremath{F1_{E}}}
+\newcommand{\MacroF}{\textit{Macro-F1}}
+
+% =====================================================================
+\begin{document}
+
+% --------------------- PHẦN ĐẦU (đánh số La Mã) ---------------------
+\pagenumbering{roman}
+
+\input{frontmatter/01-biangoai}      % Mẫu 1 (bìa ngoài)
+\input{frontmatter/02-biaphu}        % Mẫu 2 (phụ bìa)
+\input{frontmatter/03-camdoan}       % Mẫu 3 (lời cam đoan)
+\input{frontmatter/04-camon}         % Lời cảm ơn
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{frontmatter/05-vietat}        % Danh mục từ viết tắt
+\input{frontmatter/06-thongtindoan}  % Mẫu 4a + 4b (trang thông tin đồ án)
+
+% --------------------- PHẦN CHÍNH (đánh số Ả Rập) -------------------
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{chapters/00-modau}            % MỞ ĐẦU
+\input{chapters/01-tongquan}         % Chương 1
+\input{chapters/02-phuongphap}       % Chương 2
+\input{chapters/03-ketqua}           % Chương 3
+\input{chapters/04-ketluan}          % KẾT LUẬN VÀ KIẾN NGHỊ
+
+% --------------------- TÀI LIỆU THAM KHẢO ---------------------------
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{TÀI LIỆU THAM KHẢO}
+\renewcommand{\bibname}{TÀI LIỆU THAM KHẢO}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+% --------------------- PHỤ LỤC --------------------------------------
+\input{chapters/05-phuluc}
+
+\end{document}

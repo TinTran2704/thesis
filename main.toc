@@ -1,0 +1,93 @@
+\xpg@aux {}{vietnamese}
+\contentsline {chapter}{LỜI CAM ĐOAN}{iii}{chapter*.1}%
+\contentsline {chapter}{LỜI CẢM ƠN}{iv}{chapter*.2}%
+\contentsline {chapter}{DANH MỤC CÁC TỪ VIẾT TẮT}{x}{chapter*.6}%
+\contentsline {chapter}{TRANG THÔNG TIN ĐỒ ÁN}{xi}{chapter*.7}%
+\xpg@aux {}{english}
+\contentsline {chapter}{PROJECT INFORMATION}{xii}{chapter*.8}%
+\xpg@aux {}{vietnamese}
+\contentsline {chapter}{MỞ ĐẦU}{1}{chapter*.9}%
+\contentsline {section}{Giới thiệu tóm tắt về đề tài}{1}{section*.10}%
+\contentsline {section}{Lý do lựa chọn đề tài}{1}{section*.10}%
+\contentsline {section}{Mục tiêu nghiên cứu}{1}{section*.10}%
+\contentsline {section}{Đối tượng và phạm vi nghiên cứu}{2}{section*.10}%
+\contentsline {section}{Phương pháp nghiên cứu}{2}{section*.10}%
+\contentsline {section}{Ý nghĩa thực tiễn của đề tài}{2}{section*.10}%
+\contentsline {section}{Đóng góp chính của đồ án}{3}{section*.10}%
+\contentsline {section}{Bố cục của đồ án}{3}{section*.10}%
+\contentsline {chapter}{\numberline {1}TỔNG QUAN VỀ ĐỀ TÀI}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Bối cảnh và phát biểu vấn đề}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Hiện tượng bỏ học trong MOOC}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Dự báo bỏ học trong bối cảnh phân tích học tập}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Vì sao cần phân biệt nhiều mức rủi ro}{4}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Tiêu chí khảo sát tài liệu}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Sự tiến hóa của lĩnh vực qua ba giai đoạn}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Hai bộ dữ liệu chuẩn của lĩnh vực}{5}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Họ phương pháp 1: Học máy truyền thống và tối ưu hóa}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Các mô hình nền móng}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Tích hợp khả năng giải thích}{6}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Tối ưu hóa lựa chọn đặc trưng và siêu tham số}{6}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Phân tích chi tiết phương pháp luận của họ thứ nhất}{7}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}Họ phương pháp 2: Học sâu và tiếp cận dựa trên đồ thị}{7}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Mô hình chuỗi thời gian}{7}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Một kết luận cảnh báo: học sâu không phải lúc nào cũng vượt trội}{7}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Mở rộng sang nhãn đa mức và mô hình đồ thị}{7}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Phân tích chi tiết phương pháp luận của họ thứ hai}{8}{subsection.1.4.4}%
+\contentsline {section}{\numberline {1.5}Phân tích hiện trạng và khoảng trống nghiên cứu}{8}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Định vị thiết kế của khung đề xuất}{10}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Kết luận chương}{10}{section.1.7}%
+\contentsline {chapter}{\numberline {2}PHƯƠNG PHÁP THỰC HIỆN ĐỀ TÀI}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cơ sở lý thuyết}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Học có giám sát và bài toán phân loại}{11}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Bài toán phân loại có thứ tự}{11}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Mạng nơ-ron hồi quy và LSTM}{11}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}BiLSTM: LSTM hai chiều}{12}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}GRU và cơ chế chú ý nhẹ}{12}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Chiến lược điền giá trị thiếu}{13}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Hàm mất mát cho dữ liệu mất cân bằng}{14}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}Hàm softmax và diễn giải xác suất}{14}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}Quá khớp, chính quy hóa và tính tổng quát}{15}{subsection.2.1.9}%
+\contentsline {subsection}{\numberline {2.1.10}Các chỉ số đánh giá}{15}{subsection.2.1.10}%
+\contentsline {subsection}{\numberline {2.1.11}Về tính có ý nghĩa thống kê và khả năng tái lập}{16}{subsection.2.1.11}%
+\contentsline {subsection}{\numberline {2.1.12}Các mô hình baseline học máy truyền thống}{16}{subsection.2.1.12}%
+\contentsline {subsection}{\numberline {2.1.13}Đặc điểm dữ liệu MOOC và tín hiệu hành vi theo tuần}{16}{subsection.2.1.13}%
+\contentsline {section}{\numberline {2.2}Phát biểu và mô hình hóa bài toán}{16}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Kiến trúc khung EarlyRisk-MOOC}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Ba nguyên tắc thiết kế}{18}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Năm tầng xử lý}{18}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Quy trình huấn luyện và tối ưu hóa}{19}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Phân tích độ phức tạp tính toán}{19}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Chi tiết cấu hình các mô hình}{20}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Tổng hợp quy trình thành thuật toán}{20}{section.2.4}%
+\contentsline {chapter}{\numberline {3}KẾT QUẢ ĐỀ TÀI VÀ PHÂN TÍCH, ĐÁNH GIÁ, THẢO LUẬN}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Thiết lập thực nghiệm}{22}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Bộ dữ liệu và quy trình lọc cohort}{22}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Quy tắc gán nhãn và giao thức chia tập}{23}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Tái hiện sáu baseline trên cùng giao thức}{23}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Hạ tầng xử lý dữ liệu lớn và quy trình ETL}{23}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Kết quả đối sánh với sáu baseline}{24}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Phân tích chi phí--hiệu năng theo lát cắt Pareto}{24}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Phân tích lỗi và hành vi của các baseline}{25}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Kết quả mở rộng: Weighted-F1 và AUC-OVR}{25}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Thực nghiệm nội tại của EarlyRisk-MOOC}{26}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Phân tích ma trận nhầm lẫn}{27}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Phân tích sâu theo cửa sổ quan sát}{27}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Ý nghĩa của khoảng cách hiệu năng so với baseline}{27}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Thảo luận}{28}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Ý nghĩa lý thuyết và thực tiễn}{28}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Đối chiếu với công trình gần nhất}{28}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Cân nhắc về đạo đức và quyền riêng tư}{29}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Về khả năng giải thích của mô hình}{29}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Giới hạn và hướng nghiên cứu tiếp theo}{29}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Hàm ý cho triển khai thực tế}{30}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Vai trò của các trọng số trong hàm Score}{30}{subsection.3.4.7}%
+\contentsline {section}{\numberline {3.5}Kết luận chương}{30}{section.3.5}%
+\contentsline {chapter}{KẾT LUẬN VÀ KIẾN NGHỊ}{31}{chapter*.21}%
+\contentsline {section}{Kết luận}{31}{section*.22}%
+\contentsline {section}{Tổng hợp trả lời các câu hỏi nghiên cứu}{31}{Item.8}%
+\contentsline {section}{Kiến nghị và hướng nghiên cứu tiếp theo}{31}{Item.8}%
+\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{33}{section*.23}%
+\contentsline {chapter}{PHỤ LỤC}{36}{appendix*.25}%
+\contentsline {section}{Phụ lục A. Danh mục đầy đủ các đặc trưng đầu vào}{36}{section*.26}%
+\contentsline {section}{Phụ lục B. Siêu tham số chính của khung}{36}{table.Alph0.7}%
+\contentsline {section}{Phụ lục C. Phân công đóng góp (CRediT)}{36}{table.Alph0.8}%
