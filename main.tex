@@ -3,7 +3,9 @@
 %  Trình bày theo QĐ số 199/QĐ-KHTN ngày 09/02/2023
 %  Engine: XeLaTeX  (Build: XeLaTeX -> BibTeX -> XeLaTeX x2)
 % =====================================================================
-\documentclass[13pt,a4paper,oneside]{report}
+% Dùng lớp extreport (gói extsizes) vì lớp 'report' chuẩn chỉ hỗ trợ 10/11/12pt
+% -> tùy chọn 13/14pt bị bỏ qua. extreport cho phép cỡ nền 14pt (như file mẫu).
+\documentclass[14pt,a4paper,oneside]{extreport}
 
 % ---------- Ngôn ngữ & font (XeLaTeX) --------------------------------
 \usepackage{fontspec}
@@ -72,16 +74,21 @@
 
 % ---------- Định dạng tiêu đề chương/mục ----------------------------
 \usepackage{titlesec}
-\titleformat{\chapter}[block]
-  {\normalfont\large\bfseries\centering}
-  {Chương \thechapter.}{0.6em}{}
-\titlespacing*{\chapter}{0pt}{0pt}{18pt}
+% Cỡ tiêu đề theo file mẫu (23C11048): chương rất lớn, mục \Large, tiểu mục \large.
+% Chương: "Chương N" (\huge) trên một dòng, tên chương (\Huge) bên dưới, canh giữa.
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}
+  {Chương \thechapter}{12pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{24pt}
 \titleformat{\section}
-  {\normalfont\normalsize\bfseries}{\thesection}{0.6em}{}
+  {\normalfont\Large\bfseries}{\thesection}{0.6em}{}
+\titlespacing*{\section}{0pt}{14pt}{8pt}
 \titleformat{\subsection}
-  {\normalfont\normalsize\bfseries\itshape}{\thesubsection}{0.6em}{}
+  {\normalfont\large\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
 \titleformat{\subsubsection}
-  {\normalfont\normalsize\itshape}{\thesubsubsection}{0.6em}{}
+  {\normalfont\normalsize\bfseries\itshape}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\subsubsection}{0pt}{10pt}{4pt}
 
 % Caption: đầu đề bảng phía trên, đầu đề hình phía dưới (xử lý khi đặt)
 \captionsetup{labelsep=period,font=small,labelfont=bf}

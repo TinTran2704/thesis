@@ -1,13 +1,13 @@
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Tổng hợp 19 công trình tiêu biểu về dự báo bỏ học theo bộ tiêu chí thống nhất}}{9}{table.caption.11}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Định vị thiết kế của EarlyRisk-MOOC so với các công trình khảo sát ($\text {$\mathsurround \z@ \mathchar "458$}$: có; $\triangle $: một phần; $\times $: không)}}{10}{table.caption.12}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Tổng hợp 19 công trình tiêu biểu về dự báo bỏ học theo bộ tiêu chí thống nhất}}{17}{table.caption.11}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Định vị thiết kế của EarlyRisk-MOOC so với các công trình khảo sát ($\text {$\mathsurround \z@ \mathchar "458$}$: có; $\triangle $: một phần; $\times $: không)}}{19}{table.caption.12}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Thống kê chi tiết cohort thực nghiệm sau khi lọc từ MOOCCubeX}}{22}{table.caption.14}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Chi tiết tái hiện 6 công trình baseline trên cùng giao thức của EarlyRisk-MOOC}}{23}{table.caption.15}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces So sánh định lượng EarlyRisk-MOOC với 6 công trình tái hiện trên MOOCCubeX (nhãn 5 mức, cohort 100.409 cặp, split 8:1:1, seed = 42)}}{24}{table.caption.16}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Chỉ số mở rộng tại cửa sổ W2 cho các hệ thống tiêu biểu}}{26}{table.caption.18}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Kết quả thực nghiệm nội tại của EarlyRisk-MOOC theo cửa sổ quan sát}}{26}{table.caption.19}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Ma trận nhầm lẫn của cấu hình W2 + KNN + BiLSTM trên tập kiểm tra (giá trị minh họa theo tỷ lệ phần trăm hàng)}}{27}{table.caption.20}%
-\contentsline {table}{\numberline {7}{\ignorespaces Chín đặc trưng hành vi theo tuần ($\mathbf {b}_i^{(t)} \in \mathbb {R}^9$)}}{36}{table.Alph0.7}%
-\contentsline {table}{\numberline {8}{\ignorespaces Các siêu tham số chính sử dụng trong thực nghiệm}}{36}{table.Alph0.8}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Thống kê chi tiết cohort thực nghiệm sau khi lọc từ MOOCCubeX}}{39}{table.caption.14}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Chi tiết tái hiện 6 công trình baseline trên cùng giao thức của EarlyRisk-MOOC}}{41}{table.caption.15}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces So sánh định lượng EarlyRisk-MOOC với 6 công trình tái hiện trên MOOCCubeX (nhãn 5 mức, cohort 100.409 cặp, split 8:1:1, seed = 42)}}{42}{table.caption.16}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Chỉ số mở rộng tại cửa sổ W2 cho các hệ thống tiêu biểu}}{45}{table.caption.18}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Kết quả thực nghiệm nội tại của EarlyRisk-MOOC theo cửa sổ quan sát}}{45}{table.caption.19}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Ma trận nhầm lẫn của cấu hình W2 + KNN + BiLSTM trên tập kiểm tra (giá trị minh họa theo tỷ lệ phần trăm hàng)}}{47}{table.caption.20}%
+\contentsline {table}{\numberline {7}{\ignorespaces Chín đặc trưng hành vi theo tuần ($\mathbf {b}_i^{(t)} \in \mathbb {R}^9$)}}{63}{table.Alph0.7}%
+\contentsline {table}{\numberline {8}{\ignorespaces Các siêu tham số chính sử dụng trong thực nghiệm}}{63}{table.Alph0.8}%

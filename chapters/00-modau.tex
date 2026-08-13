@@ -8,23 +8,23 @@
 
 Các khóa học trực tuyến mở quy mô lớn (\textit{Massive Open Online Courses} -- MOOC) đã trở thành một thành phần quan trọng của hệ sinh thái giáo dục số trong hơn một thập kỷ qua. Với khả năng phục vụ đồng thời hàng chục nghìn người học trên một nền tảng duy nhất, MOOC mở rộng đáng kể khả năng tiếp cận giáo dục đại học, xóa nhòa rào cản địa lý và chi phí \cite{deFreitas2015}. Tuy nhiên, đi cùng với tiềm năng to lớn đó là một nghịch lý dai dẳng: tỷ lệ hoàn thành khóa học ở các nền tảng lớn như Coursera, edX, FutureLearn và XuetangX thường chỉ dao động trong khoảng 5--15\%, trong đó phần lớn người học rời bỏ khóa học ngay trong vài tuần đầu tiên \cite{Deng2022}.
 
-Đề tài của đồ án -- \textit{``\thesistitleshort''} -- tập trung vào bài toán dự báo sớm rủi ro bỏ học trong môi trường MOOC. Khác với cách tiếp cận phổ biến vốn đặt bài toán dưới dạng phân loại nhị phân (hoàn thành/không hoàn thành) và cố định một cửa sổ quan sát duy nhất, đồ án đề xuất một khung dự báo có tên \textit{EarlyRisk-MOOC}, đặt bài toán dưới dạng phân loại nhãn rủi ro \emph{có thứ tự} gồm năm mức A/B/C/D/E và đánh giá một cách hệ thống trên \emph{nhiều cửa sổ quan sát} (W1, W2, W4 tương ứng với 1, 2 và 4 tuần đầu khóa học). Cách đặt vấn đề này cho phép lượng hóa rõ ràng sự đánh đổi giữa tính kịp thời của thời điểm cảnh báo và chất lượng của dự báo -- một khía cạnh có giá trị thực tiễn cao nhưng còn ít được nghiên cứu một cách bài bản.
+Đề tài của luận văn -- \textit{``\thesistitleshort''} -- tập trung vào bài toán dự báo sớm rủi ro bỏ học trong môi trường MOOC. Khác với cách tiếp cận phổ biến vốn đặt bài toán dưới dạng phân loại nhị phân (hoàn thành/không hoàn thành) và cố định một cửa sổ quan sát duy nhất, luận văn đề xuất một khung dự báo có tên \textit{EarlyRisk-MOOC}, đặt bài toán dưới dạng phân loại nhãn rủi ro \emph{có thứ tự} gồm năm mức A/B/C/D/E và đánh giá một cách hệ thống trên \emph{nhiều cửa sổ quan sát} (W1, W2, W4 tương ứng với 1, 2 và 4 tuần đầu khóa học). Cách đặt vấn đề này cho phép lượng hóa rõ ràng sự đánh đổi giữa tính kịp thời của thời điểm cảnh báo và chất lượng của dự báo -- một khía cạnh có giá trị thực tiễn cao nhưng còn ít được nghiên cứu một cách bài bản.
 
 \section*{2. Lý do lựa chọn đề tài}
 \addcontentsline{toc}{section}{Lý do lựa chọn đề tài}
 
 Việc lựa chọn đề tài này xuất phát từ ba động cơ chính, vừa mang tính thực tiễn vừa mang tính khoa học.
 
-\textit{Thứ nhất, về mặt thực tiễn xã hội.} Bỏ học là rào cản lớn nhất ngăn MOOC phát huy hết tiềm năng dân chủ hóa giáo dục. Mỗi người học rời bỏ khóa học không chỉ là một cơ hội học tập bị bỏ lỡ mà còn là một tín hiệu cho thấy hệ thống đã không kịp thời nhận diện và hỗ trợ. Nếu hệ thống có thể nhận diện sớm những người học có nguy cơ -- đặc biệt trong những tuần đầu khi tín hiệu hành vi còn ít nhưng dư địa can thiệp còn nhiều -- thì giảng viên và nền tảng có thể chủ động gửi nhắc nhở, điều chỉnh lộ trình hoặc cung cấp hỗ trợ phù hợp.
+\textit{Thứ nhất, về mặt thực tiễn xã hội.} Bỏ học là rào cản lớn nhất ngăn MOOC phát huy hết tiềm năng phổ cập giáo dục. Mỗi một người học rời bỏ khóa học không chỉ là một cơ hội học tập bị bỏ lỡ mà còn là một tín hiệu cho thấy hệ thống đã không kịp thời nhận diện và hỗ trợ. Nếu hệ thống có thể nhận diện sớm những người học có nguy cơ -- đặc biệt trong những tuần đầu khi tín hiệu hành vi còn ít nhưng dư địa can thiệp còn nhiều -- thì giảng viên và nền tảng có thể chủ động gửi nhắc nhở, điều chỉnh lộ trình hoặc cung cấp hỗ trợ phù hợp.
 
-\textit{Thứ hai, về mặt khoa học.} Mặc dù bài toán dự báo bỏ học MOOC đã được nghiên cứu hơn một thập kỷ, phân tích chuyên sâu cho thấy lĩnh vực này vẫn tồn tại ba hạn chế cốt lõi chưa được giải quyết triệt để: (i) phần lớn công trình dùng nhãn nhị phân, gộp chung nhóm có nguy cơ với nhóm đã rời khóa, làm mất thông tin can thiệp; (ii) phần lớn công trình chỉ đo lường mô hình trên một cửa sổ quan sát cố định, không lượng hóa được đánh đổi giữa thời điểm cảnh báo và chất lượng dự báo; và (iii) các trục thiết kế phụ trợ (chiến lược điền giá trị thiếu, bộ trích xuất chuỗi, hàm mất mát) thường bị cố định thay vì được đối sánh có kiểm soát trên cùng một điều kiện. Ba hạn chế này tạo ra một khoảng trống nghiên cứu rõ ràng mà đồ án hướng tới lấp đầy.
+\textit{Thứ hai, về mặt khoa học.} Mặc dù bài toán dự báo bỏ học MOOC đã được nghiên cứu hơn một thập kỷ, dù tồn tại nhiều rào cản đa dạng, qua tổng quan nghiên cứu/phân tích, ba hạn chế cốt lõi sau đây nổi lên như những điểm nghẽn lớn nhất chưa được giải quyết triệt để: (i) phần lớn công trình dùng nhãn nhị phân, gộp chung nhóm có nguy cơ với nhóm đã rời khóa, làm mất thông tin can thiệp; (ii) phần lớn công trình chỉ đo lường mô hình trên một cửa sổ quan sát cố định, không lượng hóa được đánh đổi giữa thời điểm cảnh báo và chất lượng dự báo; và (iii) các trục thiết kế phụ trợ (chiến lược điền giá trị thiếu, bộ trích xuất chuỗi, hàm mất mát) thường bị cố định thay vì được đối sánh có kiểm soát trên cùng một điều kiện. Ba hạn chế này tạo ra một khoảng trống nghiên cứu rõ ràng mà luận văn hướng tới giải quyết.
 
 \textit{Thứ ba, về tính khả thi.} Sự ra đời của bộ dữ liệu MOOCCubeX \cite{Yu2021} -- một kho dữ liệu quy mô lớn với 3,3 triệu người học và hơn 4.000 khóa học -- cùng với sự sẵn có của các nền tảng xử lý dữ liệu lớn như Apache Spark \cite{Zaharia2016} đã làm cho việc thực nghiệm ở quy mô hàng trăm nghìn mẫu trở nên khả thi, tạo điều kiện cho một nghiên cứu benchmark có ý nghĩa thống kê thực sự.
 
 \section*{3. Mục tiêu nghiên cứu}
 \addcontentsline{toc}{section}{Mục tiêu nghiên cứu}
 
-Đồ án hướng đến bốn mục tiêu cụ thể, được ký hiệu lần lượt là M1--M4:
+Luận văn hướng đến bốn mục tiêu cụ thể, được ký hiệu lần lượt là M1--M4:
 
 \begin{itemize}[leftmargin=1.2cm,topsep=3pt]
   \item[\textbf{M1.}] Xây dựng một khung benchmark thống nhất, trong đó cùng một bộ dữ liệu (MOOCCubeX), cùng quy tắc gán nhãn 5 mức, cùng giao thức chia tập 8:1:1 và cùng hệ chỉ số đánh giá được áp dụng cho mọi cấu hình thực nghiệm.
@@ -33,7 +33,7 @@ Việc lựa chọn đề tài này xuất phát từ ba động cơ chính, v�
   \item[\textbf{M4.}] Định danh điểm vận hành cân bằng và phân tích đánh đổi chi phí--hiệu năng theo lát cắt Pareto.
 \end{itemize}
 
-Để cụ thể hóa các mục tiêu trên, đồ án trả lời ba câu hỏi nghiên cứu (\textit{Research Questions} -- RQ):
+Để cụ thể hóa các mục tiêu trên, luận văn trả lời ba câu hỏi nghiên cứu (\textit{Research Questions} -- RQ):
 
 \begin{itemize}[leftmargin=1.2cm,topsep=3pt]
   \item[\textbf{RQ1.}] Cửa sổ quan sát (W1/W2/W4) ảnh hưởng như thế nào đến chất lượng dự báo, và có tồn tại một điểm vận hành cân bằng giữa thời điểm cảnh báo, hiệu năng và chi phí hay không?
@@ -46,33 +46,33 @@ Việc lựa chọn đề tài này xuất phát từ ba động cơ chính, v�
 
 \textit{Đối tượng nghiên cứu} là người học trong các khóa học MOOC có nhật ký tương tác theo thời gian, cụ thể là những người học có tương tác thực sự trong giai đoạn đầu khóa học (4 tuần đầu).
 
-\textit{Phạm vi nghiên cứu} được giới hạn như sau. Về dữ liệu, đồ án sử dụng bộ MOOCCubeX, lọc ra cohort gồm 100.409 cặp người học--khóa học có hoạt động đạt ngưỡng tối thiểu. Về bài toán, đồ án tập trung vào dự báo rủi ro (\textit{risk prediction}) -- nghĩa là ước lượng xác suất người học rơi vào từng mức rủi ro -- mà không bao gồm suy luận nhân quả hay đánh giá hiệu ứng của chính sách can thiệp sau dự báo. Về mô hình, đồ án giới hạn ở các họ phương pháp học máy truyền thống và học sâu chuỗi thời gian; các mô hình ngôn ngữ lớn và mô hình đồ thị quy mô lớn nằm ngoài phạm vi đóng góp chính.
+\textit{Phạm vi nghiên cứu} được giới hạn như sau. Về dữ liệu, luận văn sử dụng bộ MOOCCubeX, lọc ra cohort gồm 100.409 cặp người học--khóa học có hoạt động đạt ngưỡng tối thiểu. Về bài toán, luận văn tập trung vào dự báo rủi ro (\textit{risk prediction}) -- nghĩa là ước lượng xác suất người học rơi vào từng mức rủi ro -- mà không bao gồm suy luận nhân quả hay đánh giá hiệu ứng của chính sách can thiệp sau dự báo. Về mô hình, luận văn giới hạn ở các họ phương pháp học máy truyền thống và học sâu chuỗi thời gian; các mô hình ngôn ngữ lớn và mô hình đồ thị quy mô lớn nằm ngoài phạm vi đóng góp chính.
 
 \section*{5. Phương pháp nghiên cứu}
 \addcontentsline{toc}{section}{Phương pháp nghiên cứu}
 
-Đồ án kết hợp phương pháp nghiên cứu lý thuyết và thực nghiệm. Về lý thuyết, đồ án tiến hành khảo sát có hệ thống các công trình liên quan, phân loại theo các họ phương pháp và tổng hợp khoảng trống nghiên cứu. Về thực nghiệm, đồ án áp dụng phương pháp \textit{benchmark có kiểm soát}: cố định mọi yếu tố ngoài biến thí nghiệm (cohort, nhãn, giao thức chia tập, phần cứng) để bảo đảm các so sánh là công bằng và có ý nghĩa thống kê. Hạ tầng xử lý dữ liệu (ETL) sử dụng Apache Spark; phần huấn luyện và đánh giá mô hình sử dụng các thư viện \texttt{pandas}, \texttt{scikit-learn} và \texttt{PyTorch} trong cùng một môi trường tính toán.
+Luận văn kết hợp phương pháp nghiên cứu lý thuyết và thực nghiệm. Về lý thuyết, luận văn tiến hành khảo sát có hệ thống các công trình liên quan, phân loại theo các họ phương pháp và tổng hợp khoảng trống nghiên cứu. Về thực nghiệm, luận văn áp dụng phương pháp \textit{benchmark có kiểm soát}: cố định mọi yếu tố ngoài biến thí nghiệm (cohort, nhãn, giao thức chia tập, phần cứng) để bảo đảm các so sánh là công bằng và có ý nghĩa thống kê. Hạ tầng xử lý dữ liệu (ETL) sử dụng Apache Spark; phần huấn luyện và đánh giá mô hình sử dụng các thư viện \texttt{pandas}, \texttt{scikit-learn} và \texttt{PyTorch} trong cùng một môi trường tính toán.
 
 \section*{6. Ý nghĩa thực tiễn của đề tài}
 \addcontentsline{toc}{section}{Ý nghĩa thực tiễn của đề tài}
 
-Kết quả của đồ án có ba ý nghĩa thực tiễn rõ rệt. Thứ nhất, việc đặt bài toán dưới dạng nhãn rủi ro có thứ tự cung cấp cho người vận hành hệ thống một ngữ nghĩa chi tiết hơn nhãn nhị phân, cho phép xếp hạng ưu tiên can thiệp. Thứ hai, phân tích đa cửa sổ cung cấp bằng chứng định lượng giúp người vận hành lựa chọn thời điểm cảnh báo phù hợp với ràng buộc về tài nguyên. Thứ ba, việc thiết lập một mặt bằng đối sánh chung cho các họ phương pháp tạo ra một tham chiếu hữu ích cho các nghiên cứu tiếp theo trong lĩnh vực.
+Kết quả của luận văn có ba ý nghĩa thực tiễn rõ rệt. Thứ nhất, việc đặt bài toán dưới dạng nhãn rủi ro có thứ tự cung cấp cho người vận hành hệ thống một ngữ nghĩa chi tiết hơn nhãn nhị phân, cho phép xếp hạng ưu tiên can thiệp. Thứ hai, phân tích đa cửa sổ cung cấp bằng chứng định lượng giúp người vận hành lựa chọn thời điểm cảnh báo phù hợp với ràng buộc về tài nguyên. Thứ ba, việc thiết lập một mặt bằng đối sánh chung cho các họ phương pháp tạo ra một tham chiếu hữu ích cho các nghiên cứu tiếp theo trong lĩnh vực.
 
-\section*{7. Đóng góp chính của đồ án}
-\addcontentsline{toc}{section}{Đóng góp chính của đồ án}
+\section*{7. Đóng góp chính của luận văn}
+\addcontentsline{toc}{section}{Đóng góp chính của luận văn}
 
-Đóng góp chính của đồ án nằm ở việc đưa ra một \emph{quan điểm thiết kế} khác biệt cho bài toán dự báo bỏ học MOOC: thay vì tìm mô hình tốt nhất ở một điểm vận hành duy nhất, đồ án đối sánh có hệ thống đánh đổi giữa thời điểm cảnh báo, chất lượng dự báo và chi phí triển khai trên cùng một mặt bằng thực nghiệm. Quan điểm này được hiện thực hóa qua bốn đóng góp cụ thể:
+Đóng góp chính của luận văn nằm ở việc đưa ra một \emph{quan điểm thiết kế} khác biệt cho bài toán dự báo bỏ học MOOC: thay vì tìm mô hình tốt nhất ở một điểm vận hành duy nhất, luận văn đối sánh có hệ thống đánh đổi giữa thời điểm cảnh báo, chất lượng dự báo và chi phí triển khai trên cùng một mặt bằng thực nghiệm. Quan điểm này được hiện thực hóa qua bốn đóng góp cụ thể:
 
 \begin{itemize}[leftmargin=1.2cm,topsep=3pt]
   \item \textit{Thứ nhất}, khác với phần lớn các công trình trước đó cố định một cửa sổ quan sát duy nhất, khung đề xuất buộc mọi mô hình phải đi qua ba mức W1/W2/W4 trên cùng cohort và cùng quy tắc nhãn, khắc phục trực tiếp khoảng trống về phân tích đa cửa sổ.
   \item \textit{Thứ hai}, khung tái hiện sáu baseline trên cùng cohort 100.409 cặp, cùng nhãn năm mức, cùng split 8:1:1, cùng phần cứng, tạo ra phép so sánh có ý nghĩa thống kê thực sự.
   \item \textit{Thứ ba}, về hiệu suất, cấu hình W2 + KNN + BiLSTM đạt Macro-F1 = 0,9499, giữ 99,4\% chất lượng của W4 trong khi giảm 12,9\% thời gian chạy và vượt baseline tốt nhất 9,1\% Macro-F1.
-  \item \textit{Thứ tư}, về phương pháp luận, KNN cục bộ nhất quán cho hiệu năng cao hơn phương pháp điền khuyết toàn cục dựa trên đồ thị, gợi ý rằng trong thiết lập cửa sổ thời gian ngắn, giải pháp nhẹ hơn đã đủ hiệu quả mà không cần chi phí dựng đồ thị $O(n^2)$.
+  \item \textit{Thứ tư}, về phương pháp luận, tại cả ba cửa sổ quan sát, cấu hình tốt nhất trong số 48 cấu hình nội tại đều dùng phép điền khuyết KNN cục bộ, cho thấy trong thiết lập cửa sổ quan sát ngắn, thông tin lân cận cục bộ trong không gian đặc trưng đã đủ để khôi phục giá trị thiếu mà không cần đến chi phí dựng đồ thị tương đồng và huấn luyện bộ điền khuyết GNN (kèm nhiều siêu tham số như τ, top-k, số epoch). Việc xác lập một thứ hạng đầy đủ giữa bốn chiến lược điền khuyết trên toàn bộ 48 cấu hình cần một phân tích tổng hợp theo trục thiết kế, được đề xuất là hướng bổ sung trực tiếp.
 \end{itemize}
 
-\section*{8. Bố cục của đồ án}
-\addcontentsline{toc}{section}{Bố cục của đồ án}
+\section*{8. Bố cục của luận văn}
+\addcontentsline{toc}{section}{Bố cục của luận văn}
 
-Phần còn lại của đồ án được tổ chức như sau. \textbf{Chương 1} tổng quan về đề tài: khảo sát các công trình liên quan theo các họ phương pháp, phân tích hiện trạng và tổng hợp khoảng trống nghiên cứu. \textbf{Chương 2} trình bày phương pháp thực hiện đề tài: cơ sở lý thuyết của các thành phần kỹ thuật, phát biểu hình thức bài toán và kiến trúc năm tầng của khung EarlyRisk-MOOC. \textbf{Chương 3} báo cáo kết quả thực nghiệm và phân tích: thiết lập thực nghiệm, kết quả đối sánh với các baseline, thực nghiệm nội tại và thảo luận. \textbf{Kết luận và kiến nghị} tổng kết các phát hiện mới và đề xuất hướng nghiên cứu tiếp theo.
+Phần còn lại của luận văn được tổ chức như sau. \textbf{Chương 1} tổng quan về đề tài: khảo sát các công trình liên quan theo các họ phương pháp, phân tích hiện trạng và tổng hợp khoảng trống nghiên cứu. \textbf{Chương 2} trình bày phương pháp thực hiện đề tài: cơ sở lý thuyết của các thành phần kỹ thuật, phát biểu hình thức bài toán và kiến trúc năm tầng của khung EarlyRisk-MOOC. \textbf{Chương 3} báo cáo kết quả thực nghiệm và phân tích: thiết lập thực nghiệm, kết quả đối sánh với các baseline, thực nghiệm nội tại và thảo luận. \textbf{Kết luận và kiến nghị} tổng kết các phát hiện mới và đề xuất hướng nghiên cứu tiếp theo.
 
 \clearpage
