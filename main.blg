@@ -10,6 +10,7 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: references.bib
+Warning--I didn't find a database entry for "Benabbes2025"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -17,42 +18,43 @@ Database file #1: references.bib
 Done.
 You've used 30 entries,
             4087 wiz_defined-function locations,
-            1025 strings with 14055 characters,
-and the built_in function-call counts, 25938 in all, are:
-= -- 2085
-> -- 774
-< -- 200
-+ -- 418
-- -- 162
-* -- 1262
-:= -- 3697
+            1029 strings with 14020 characters,
+and the built_in function-call counts, 26144 in all, are:
+= -- 2118
+> -- 767
+< -- 203
++ -- 415
+- -- 160
+* -- 1268
+:= -- 3721
 add.period$ -- 61
 call.type$ -- 30
 change.case$ -- 32
-chr.to.int$ -- 432
+chr.to.int$ -- 435
 cite$ -- 30
-duplicate$ -- 1871
-empty$ -- 1963
-format.name$ -- 180
-if$ -- 6088
+duplicate$ -- 1889
+empty$ -- 1971
+format.name$ -- 178
+if$ -- 6145
 int.to.chr$ -- 0
 int.to.str$ -- 30
 missing$ -- 350
 newline$ -- 113
 num.names$ -- 30
-pop$ -- 830
+pop$ -- 824
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2014
+skip$ -- 2041
 stack$ -- 0
-substring$ -- 1160
-swap$ -- 1573
-text.length$ -- 56
+substring$ -- 1180
+swap$ -- 1595
+text.length$ -- 58
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 30
 warning$ -- 0
-while$ -- 108
+while$ -- 109
 width$ -- 32
-write$ -- 319
+write$ -- 321
+(There was 1 warning)

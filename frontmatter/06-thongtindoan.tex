@@ -15,15 +15,15 @@
 \vspace{0.3cm}
 \noindent\textbf{1. TÓM TẮT NỘI DUNG LUẬN VĂN:}
 
-\noindent Sự bùng nổ của các khóa học trực tuyến mở quy mô lớn (MOOC) mang lại cơ hội tiếp cận giáo dục bình đẳng nhưng đối diện thách thức nghiêm trọng về tỷ lệ hoàn thành thấp (5--15\%). Dự báo sớm người học có nguy cơ bỏ học là điều kiện cần để can thiệp kịp thời. Luận văn đề xuất \textit{EarlyRisk-MOOC} -- một khung dự báo sớm đa cửa sổ trên ba thời điểm W1, W2 và W4 (1, 2 và 4 tuần đầu khóa học), với 48 cấu hình hoán đổi có kiểm soát giữa các chiến lược điền giá trị thiếu, hai bộ trích xuất chuỗi và hai hàm mất mát. Bài toán được đặt dưới dạng phân loại nhãn rủi ro có thứ tự A/B/C/D/E thay cho nhãn nhị phân truyền thống. Thực nghiệm trên bộ dữ liệu MOOCCubeX với 100.409 cặp người học--khóa học cho thấy cấu hình W2 + KNN + BiLSTM đạt Macro-F1 = 0,9499 và \FoneD{} = 0,9772.
+\noindent Sự bùng nổ của các khóa học trực tuyến mở quy mô lớn (MOOC) mang lại cơ hội tiếp cận giáo dục bình đẳng nhưng đối diện thách thức nghiêm trọng về tỷ lệ hoàn thành thấp (5--15\%). Dự báo sớm người học có nguy cơ bỏ học là điều kiện cần để can thiệp kịp thời. Luận văn đề xuất \textit{EarlyRisk-MOOC} -- một khung dự báo sớm đa cửa sổ trên ba thời điểm W1, W2 và W4 (1, 2 và 4 tuần đầu khóa học), với 48 cấu hình hoán đổi có kiểm soát giữa các chiến lược điền giá trị thiếu, hai bộ trích xuất chuỗi và hai hàm mất mát. Bài toán được đặt dưới dạng phân loại nhãn rủi ro có thứ tự A/B/C/D/E thay cho nhãn nhị phân truyền thống. Thực nghiệm trên bộ dữ liệu MOOCCubeX với 100.409 cặp người học--khóa học (trung bình 5 hạt giống ngẫu nhiên) cho thấy cấu hình W2 + KNN + BiLSTM đạt Macro-F1 = 0,9847 và \FoneD{} = 0,9920.
 
 \vspace{0.2cm}
 \noindent\textbf{2. NHỮNG KẾT QUẢ MỚI CỦA LUẬN VĂN:}
 \begin{itemize}[leftmargin=1.2cm,topsep=2pt,itemsep=1pt]
   \item Thiết kế bài toán nhãn 5 mức có thứ tự thay cho nhãn nhị phân, bảo toàn được tín hiệu phân biệt nhóm ``đang hoạt động nhưng rủi ro cao'' với nhóm ``đã rời khóa''.
   \item Khung benchmark đa cửa sổ thống nhất: cùng cohort, cùng quy tắc nhãn, cùng giao thức chia tập 8:1:1 cho mọi cấu hình.
-  \item Tái hiện sáu công trình tiêu biểu trên cùng giao thức, tạo cơ sở so sánh có ý nghĩa thống kê; cấu hình đề xuất vượt baseline tốt nhất 9,1\% điểm Macro-F1 tại W2.
-  \item Định danh điểm vận hành cân bằng W2 + KNN + BiLSTM, giữ 99,4\% chất lượng của W4 với chi phí thời gian thấp hơn 12,9\%.
+  \item Tái hiện sáu công trình tiêu biểu trên cùng giao thức, tạo cơ sở so sánh có ý nghĩa thống kê; cấu hình đề xuất dẫn đầu ở cả ba cửa sổ W1/W2/W4 và vượt baseline tốt nhất 12,3\% điểm Macro-F1 tại W2.
+  \item Định danh điểm vận hành cân bằng W2 + KNN + BiLSTM, giữ 99,2\% chất lượng của W4 với chi phí thời gian thấp hơn 21,3\%.
 \end{itemize}
 
 \vspace{0.2cm}
@@ -51,15 +51,15 @@
 \vspace{0.3cm}
 \noindent\textbf{1. SUMMARY:}
 
-\noindent The proliferation of Massive Open Online Courses (MOOCs) offers equitable access to education but faces a critical retention challenge, with completion rates of only 5--15\%. Early prediction of at-risk learners is a prerequisite for timely intervention. This thesis proposes \textit{EarlyRisk-MOOC}, a unified multi-window early-prediction framework spanning three observation points W1, W2 and W4 (the first 1, 2 and 4 weeks), benchmarking 48 controlled configurations across missing-value imputation strategies, two sequence encoders and two loss functions. The task is cast as ordinal risk classification over five levels A/B/C/D/E rather than the conventional binary label. Experiments on MOOCCubeX (100{,}409 learner--course pairs) show the W2 + KNN + BiLSTM configuration achieves a Macro-F1 of 0.9499 and \FoneD{} of 0.9772.
+\noindent The proliferation of Massive Open Online Courses (MOOCs) offers equitable access to education but faces a critical retention challenge, with completion rates of only 5--15\%. Early prediction of at-risk learners is a prerequisite for timely intervention. This thesis proposes \textit{EarlyRisk-MOOC}, a unified multi-window early-prediction framework spanning three observation points W1, W2 and W4 (the first 1, 2 and 4 weeks), benchmarking 48 controlled configurations across missing-value imputation strategies, two sequence encoders and two loss functions. The task is cast as ordinal risk classification over five levels A/B/C/D/E rather than the conventional binary label. Experiments on MOOCCubeX (100{,}409 learner--course pairs, averaged over 5 random seeds) show the W2 + KNN + BiLSTM configuration achieves a Macro-F1 of 0.9847 and \FoneD{} of 0.9920.
 
 \vspace{0.2cm}
 \noindent\textbf{2. NOVELTY OF THESIS:}
 \begin{itemize}[leftmargin=1.2cm,topsep=2pt,itemsep=1pt]
   \item A five-level ordinal label design that preserves the distinction between ``active but high-risk'' and ``already dropped-out'' learners.
   \item A unified multi-window benchmark applying the same cohort, labeling rule and 8:1:1 split protocol to every configuration.
-  \item Faithful reproduction of six representative baselines under one protocol, enabling statistically meaningful comparison; the proposed configuration surpasses the strongest baseline by 9.1\% Macro-F1 at W2.
-  \item Identification of a balanced operating point (W2 + KNN + BiLSTM) retaining 99.4\% of W4 quality at 12.9\% lower runtime.
+  \item Faithful reproduction of six representative baselines under one protocol, enabling statistically meaningful comparison; the proposed configuration leads at all three windows W1/W2/W4 and surpasses the strongest baseline by 12.3\% Macro-F1 at W2.
+  \item Identification of a balanced operating point (W2 + KNN + BiLSTM) retaining 99.2\% of W4 quality at 21.3\% lower runtime.
 \end{itemize}
 
 \vspace{0.2cm}

@@ -56,11 +56,10 @@ B.~Prenkaj, P.~Velardi, G.~Stilo, D.~Distante, and S.~Faralli, ``A survey of
   machine learning approaches for student dropout prediction in online
   courses,'' \emph{ACM Computing Surveys}, vol.~53, no.~3, pp. 1--34, 2020.
 
-\bibitem{Aljohani2025}
-N.~R. Aljohani, M.~Aslam, A.~O. Khadidos, and A.~Alhothali, ``A comprehensive
-  review of dropout prediction methods based on multivariate analysed features
-  of {MOOC} platforms,'' \emph{Multimodal Technologies and Interaction},
-  vol.~9, no.~1, p.~3, 2025.
+\bibitem{Alghamdi2025}
+S.~Alghamdi, B.~Soh, and A.~Li, ``A comprehensive review of dropout prediction
+  methods based on multivariate analysed features of {MOOC} platforms,''
+  \emph{Multimodal Technologies and Interaction}, vol.~9, no.~1, p.~3, 2025.
 
 \bibitem{Kuzilek2017}
 J.~Kuzilek, M.~Hlosta, and Z.~Zdrahal, ``Open university learning analytics
@@ -111,10 +110,10 @@ M.~V. Martins, D.~Tolledo, J.~Machado, L.~M.~T. Baptista, and V.~Realinho,
   education,'' \emph{Applied Sciences}, vol.~13, no.~8, p. 4702, 2023.
 
 \bibitem{Junejo2025}
-N.~U.~R. Junejo, H.~Wang, Y.~Chen, W.~Yu, J.~Wei, and Y.~Yang, ``Accurate
-  multi-category student performance forecasting at early stages of online
-  education using neural networks,'' \emph{Scientific Reports}, vol.~15, p.
-  17234, 2025.
+N.~U.~R. Junejo, M.~W. Nawaz, Q.~Huang, X.~Dong, C.~Wang, and G.~Zheng,
+  ``Accurate multi-category student performance forecasting at early stages of
+  online education using neural networks,'' \emph{Scientific Reports}, vol.~15,
+  p. 16251, 2025.
 
 \bibitem{Aouarib2025}
 H.~E. Aouarib, S.~E. Henouda, and F.~Z. Laallam, ``Predicting student dropout
@@ -128,10 +127,10 @@ T.~Nguyen, K.~Nguyen, P.~Nguyen, K.~Tan~Vo, T.~T. Ta, P.~Nguyen, H.~T. Nguyen,
   and deep learning for {MOOC} completion prediction,'' \emph{IEEE Access},
   vol.~13, pp. 195\,272--195\,294, 2025.
 
-\bibitem{Benabbes2025}
-K.~Benabbes, K.~Housni, A.~Zellou, B.~Hmedna, and A.~El~Mezouary, ``A modular
-  and explainable machine learning pipeline for student dropout prediction in
-  higher education,'' \emph{Algorithms}, vol.~18, no.~10, p. 662, 2025.
+\bibitem{Bettahi2025}
+A.~Bettahi, F.~Z. Belouadha, and H.~Harroud, ``A modular and explainable
+  machine learning pipeline for student dropout prediction in higher
+  education,'' \emph{Algorithms}, vol.~18, no.~10, p. 662, 2025.
 
 \bibitem{Alamri2019}
 A.~Alamri, M.~Alshehri, A.~I. Cristea, F.~D. Pereira, E.~Oliveira, L.~Shi, and
@@ -168,17 +167,17 @@ J.~Yu, X.~Diao, M.~Cock, M.~Mejia-Lavalle, and R.~Salem, ``Meta transfer
   learning for early success prediction in {MOOCs},'' in \emph{Proceedings of
   the Ninth ACM Conference on Learning @ Scale}, 2022, pp. 121--132.
 
-\bibitem{Vlachopoulos2025}
-P.~Vlachopoulos, C.~Makridis, A.~Mavroudi, and A.~L. Symeonidis, ``Imbalanced
-  multi-class prediction of student drop-out and graduation,'' \emph{Journal on
-  Efficiency and Responsibility in Education and Science}, vol.~18, no.~1, pp.
-  1--23, 2025.
+\bibitem{Setiawan2026}
+R.~Setiawan, E.~Noersasongko, A.~Syukur, F.~Budiman, and D.~Kurniadi,
+  ``Imbalanced multi-class prediction of student drop-out and graduation: A
+  systematic literature review,'' \emph{Journal on Efficiency and
+  Responsibility in Education and Science}, vol.~19, no.~1, pp. 72--90, 2026.
 
 \bibitem{Schwerter2026}
-J.~Schwerter, P.~Reimann, S.~M.~M. Mooij, C.~Marx, S.~Caspari-Sadeghi,
-  J.~Hochweber, M.~J. Tomasik, and G.~A.~D. Liem, ``Cross-course
-  generalizability of {SRL}-aligned predictive models using digital learning
-  traces,'' \emph{arXiv preprint arXiv:2604.22812}, 2026.
+J.~Schwerter, L.~Sabel, J.~Bose, M.~L. Bernacki, D.~Xu, M.~Schmellenkamp,
+  T.~Zeume, and P.~Doebler, ``Cross-course generalizability of {SRL}-aligned
+  predictive models using digital learning traces,'' \emph{Computers \&
+  Education}, vol. 253, p. 105670, 2026.
 
 \bibitem{Cui2019}
 Y.~Cui, M.~Jia, T.~Y. Lin, Y.~Song, and S.~Belongie, ``Class-balanced loss

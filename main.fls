@@ -1,0 +1,488 @@
+PWD C:\TinTran\HCM-US\Graduate Thesis Master\Thesis\EarlyRisk-MOOC_thesis\thesis
+INPUT C:\Users\ADMIN\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
+INPUT main.tex
+OUTPUT main.log
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\extsizes\extreport.cls
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\extsizes\extreport.cls
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\extsizes\size14.clo
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\extsizes\size14.clo
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\extsizes\size14.clo
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\base\exscale.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\base\exscale.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\fontspec\fontspec.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\fontspec\fontspec.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\l3kernel\expl3.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\l3kernel\expl3.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\l3backend\l3backend-xetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\l3backend\l3backend-xetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\fontspec\fontspec-xetex.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\fontspec\fontspec-xetex.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\base\fontenc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\base\fontenc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\fontspec\fontspec.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\fontspec\fontspec.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\fontspec\fontspec.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\polyglossia\polyglossia.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\polyglossia\polyglossia.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\iftex\iftex.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\iftex\iftex.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\polyglossia\gloss-latex.ldf
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\polyglossia\gloss-latex.ldf
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\polyglossia\gloss-vietnamese.ldf
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\polyglossia\gloss-vietnamese.ldf
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\polyglossia\gloss-english.ldf
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\polyglossia\gloss-english.ldf
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\geometry\geometry.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\geometry\geometry.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\keyval.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\keyval.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\iftex\ifvtex.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\iftex\ifvtex.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\geometry\geometry.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\geometry\geometry.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\geometry\geometry.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\setspace\setspace.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\setspace\setspace.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amsmath.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amsmath.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amsopn.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amstext.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amstext.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amsgen.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amsgen.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amsbsy.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amsbsy.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsmath\amsopn.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\amssymb.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\amssymb.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\algorithm2e\algorithm2e.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\algorithm2e\algorithm2e.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\base\ifthen.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\base\ifthen.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\ifoddpage\ifoddpage.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\ifoddpage\ifoddpage.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\xspace.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\xspace.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\relsize\relsize.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\relsize\relsize.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\mathtools\mathtools.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\mathtools\mathtools.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\calc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\calc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\mathtools\mhsetup.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\mathtools\mhsetup.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\graphicx.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\graphicx.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\graphics.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\graphics.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\trig.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\trig.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics-def\xetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics-def\xetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics-def\xetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\float\float.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\float\float.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\booktabs\booktabs.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\booktabs\booktabs.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\array.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\array.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\multirow\multirow.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\multirow\multirow.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\longtable.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\longtable.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\tabularx.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\tools\tabularx.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\makecell\makecell.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\makecell\makecell.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\caption\caption.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\caption\caption.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\caption\caption3.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\caption\caption3.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\caption\ltcaption.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\caption\ltcaption.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\caption\subcaption.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\caption\subcaption.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\enumitem\enumitem.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\enumitem\enumitem.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\xcolor\xcolor.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\xcolor\xcolor.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics-cfg\color.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics-cfg\color.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics-cfg\color.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\mathcolor.ltx
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\mathcolor.ltx
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\graphics\mathcolor.ltx
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\frontendlayer\tikz.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\frontendlayer\tikz.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\basiclayer\pgf.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\basiclayer\pgf.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfutil-common.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfutil-latex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\pgf.revision.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\pgf.revision.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\basiclayer\pgfcore.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\basiclayer\pgfcore.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfkeyslibraryfiltered.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgf.cfg
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsys-xetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsys-xetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsys-dvipdfmx.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathutil.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathparser.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfunctions.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfunctions.random.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfunctions.base.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfunctions.round.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathcalc.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmathfloat.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfint.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\basiclayer\pgfcorerdf.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\utilities\pgffor.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\utilities\pgffor.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\utilities\pgfkeys.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\utilities\pgfkeys.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\math\pgfmath.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgf\math\pgfmath.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\shapes\pgflibraryshapes.geometric.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\shapes\pgflibraryshapes.geometric.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryarrows.meta.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryarrows.meta.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryarrows.meta.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfit.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfit.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybackgrounds.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybackgrounds.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgfplots\pgfplots.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\pgfplots\pgfplots.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsys-luatex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\systemlayer\pgfsys-luatex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplots.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplotscore.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\sys\pgfplotssysgeneric.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\libs\pgfplotslibrary.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryfpu.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryfpu.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryfpu.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\util\pgfplotsutil.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\liststructure\pgfplotsliststructure.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\liststructure\pgfplotsliststructureext.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\liststructure\pgfplotsarray.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\liststructure\pgfplotsmatrix.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\numtable\pgfplotstableshared.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\liststructure\pgfplotsdeque.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\util\pgfplotsbinary.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\util\pgfplotsbinary.data.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\util\pgfplotsutil.verb.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\libs\pgflibrarypgfplots.surfshading.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfshading.pgfsys-xetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfshading.pgfsys-xetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\util\pgfplotscolormap.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\util\pgfplotscolor.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplotsstackedplots.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplotsplothandlers.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplotsmeshplothandler.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplotsmeshplotimage.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplots.scaling.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplotscoordprocessing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplots.errorbars.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplots.markers.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplotsticks.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\pgfplots.paths.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\modules\pgfmoduledecorations.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathmorphing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathmorphing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\libs\tikzlibrarypgfplots.contourlua.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgfplots\libs\tikzlibrarypgfplots.contourlua.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
+INPUT .\frontmatter\00-thongtin.tex
+INPUT .\frontmatter\00-thongtin.tex
+INPUT .\frontmatter\00-thongtin.tex
+INPUT .\frontmatter\00-thongtin.tex
+INPUT frontmatter\00-thongtin.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\hyperref.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\hyperref.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hycolor\hycolor.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hycolor\hycolor.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\nameref.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\nameref.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\refcount\refcount.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\refcount\refcount.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\stringenc\stringenc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\stringenc\stringenc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\pd1enc.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\pd1enc.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\pd1enc.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\intcalc\intcalc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\intcalc\intcalc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\puenc.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\puenc.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\puenc.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\url\url.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\url\url.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\adobe\zapfding\pzdr.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\bitset\bitset.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\bitset\bitset.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\hxetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\hxetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\hyperref\hxetex.def
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\titlesec\titlesec.sty
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\titlesec\titlesec.sty
+INPUT .\main.aux
+INPUT .\main.aux
+INPUT main.aux
+OUTPUT main.aux
+INPUT .\main.out
+INPUT .\main.out
+INPUT main.out
+INPUT main.out
+INPUT .\main.out
+INPUT .\main.out
+OUTPUT main.out
+INPUT .\frontmatter\01-biangoai.tex
+INPUT .\frontmatter\01-biangoai.tex
+INPUT .\frontmatter\01-biangoai.tex
+INPUT .\frontmatter\01-biangoai.tex
+INPUT frontmatter\01-biangoai.tex
+OUTPUT main.xdv
+INPUT .\frontmatter\02-biaphu.tex
+INPUT .\frontmatter\02-biaphu.tex
+INPUT .\frontmatter\02-biaphu.tex
+INPUT .\frontmatter\02-biaphu.tex
+INPUT frontmatter\02-biaphu.tex
+INPUT .\frontmatter\03-camdoan.tex
+INPUT .\frontmatter\03-camdoan.tex
+INPUT .\frontmatter\03-camdoan.tex
+INPUT .\frontmatter\03-camdoan.tex
+INPUT frontmatter\03-camdoan.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\umsa.fd
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\umsa.fd
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\umsa.fd
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\umsb.fd
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\umsb.fd
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\tex\latex\amsfonts\umsb.fd
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmr12.tfm
+INPUT .\frontmatter\04-camon.tex
+INPUT .\frontmatter\04-camon.tex
+INPUT .\frontmatter\04-camon.tex
+INPUT .\frontmatter\04-camon.tex
+INPUT frontmatter\04-camon.tex
+INPUT .\main.toc
+INPUT .\main.toc
+INPUT main.toc
+OUTPUT main.toc
+INPUT .\main.lof
+INPUT .\main.lof
+INPUT main.lof
+OUTPUT main.lof
+INPUT .\main.lot
+INPUT .\main.lot
+INPUT main.lot
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+OUTPUT main.lot
+INPUT .\frontmatter\05-vietat.tex
+INPUT .\frontmatter\05-vietat.tex
+INPUT .\frontmatter\05-vietat.tex
+INPUT .\frontmatter\05-vietat.tex
+INPUT frontmatter\05-vietat.tex
+INPUT .\frontmatter\06-thongtindoan.tex
+INPUT .\frontmatter\06-thongtindoan.tex
+INPUT .\frontmatter\06-thongtindoan.tex
+INPUT .\frontmatter\06-thongtindoan.tex
+INPUT frontmatter\06-thongtindoan.tex
+INPUT .\chapters\00-modau.tex
+INPUT .\chapters\00-modau.tex
+INPUT .\chapters\00-modau.tex
+INPUT .\chapters\00-modau.tex
+INPUT chapters\00-modau.tex
+INPUT .\chapters\01-tongquan.tex
+INPUT .\chapters\01-tongquan.tex
+INPUT .\chapters\01-tongquan.tex
+INPUT .\chapters\01-tongquan.tex
+INPUT chapters\01-tongquan.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmr6.tfm
+INPUT .\chapters\02-phuongphap.tex
+INPUT .\chapters\02-phuongphap.tex
+INPUT .\chapters\02-phuongphap.tex
+INPUT .\chapters\02-phuongphap.tex
+INPUT chapters\02-phuongphap.tex
+INPUT .\chapters\03-ketqua.tex
+INPUT .\chapters\03-ketqua.tex
+INPUT .\chapters\03-ketqua.tex
+INPUT .\chapters\03-ketqua.tex
+INPUT chapters\03-ketqua.tex
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmmib10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\cmextra\cmmib7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmbsy10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\TinTran\HCM-US\Graduate Thesis Master\latex\fonts\tfm\public\cm\cmbx5.tfm
+INPUT .\chapters\04-ketluan.tex
+INPUT .\chapters\04-ketluan.tex
+INPUT .\chapters\04-ketluan.tex
+INPUT .\chapters\04-ketluan.tex
+INPUT chapters\04-ketluan.tex
+INPUT .\main.bbl
+INPUT .\main.bbl
+INPUT main.bbl
+INPUT .\chapters\05-phuluc.tex
+INPUT .\chapters\05-phuluc.tex
+INPUT .\chapters\05-phuluc.tex
+INPUT .\chapters\05-phuluc.tex
+INPUT chapters\05-phuluc.tex
+INPUT main.aux
+INPUT .\main.out
+INPUT .\main.out

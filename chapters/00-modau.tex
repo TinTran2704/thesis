@@ -66,7 +66,7 @@ Kết quả của luận văn có ba ý nghĩa thực tiễn rõ rệt. Thứ nh
 \begin{itemize}[leftmargin=1.2cm,topsep=3pt]
   \item \textit{Thứ nhất}, khác với phần lớn các công trình trước đó cố định một cửa sổ quan sát duy nhất, khung đề xuất buộc mọi mô hình phải đi qua ba mức W1/W2/W4 trên cùng cohort và cùng quy tắc nhãn, khắc phục trực tiếp khoảng trống về phân tích đa cửa sổ.
   \item \textit{Thứ hai}, khung tái hiện sáu baseline trên cùng cohort 100.409 cặp, cùng nhãn năm mức, cùng split 8:1:1, cùng phần cứng, tạo ra phép so sánh có ý nghĩa thống kê thực sự.
-  \item \textit{Thứ ba}, về hiệu suất, cấu hình W2 + KNN + BiLSTM đạt Macro-F1 = 0,9499, giữ 99,4\% chất lượng của W4 trong khi giảm 12,9\% thời gian chạy và vượt baseline tốt nhất 9,1\% Macro-F1.
+  \item \textit{Thứ ba}, về hiệu suất, cấu hình W2 + KNN + BiLSTM đạt Macro-F1 = 0,9847, dẫn đầu ở cả ba cửa sổ W1/W2/W4, giữ 99,2\% chất lượng của W4 trong khi giảm 21,3\% thời gian chạy và vượt baseline tốt nhất 12,3\% Macro-F1 tại W2.
   \item \textit{Thứ tư}, về phương pháp luận, tại cả ba cửa sổ quan sát, cấu hình tốt nhất trong số 48 cấu hình nội tại đều dùng phép điền khuyết KNN cục bộ, cho thấy trong thiết lập cửa sổ quan sát ngắn, thông tin lân cận cục bộ trong không gian đặc trưng đã đủ để khôi phục giá trị thiếu mà không cần đến chi phí dựng đồ thị tương đồng và huấn luyện bộ điền khuyết GNN (kèm nhiều siêu tham số như τ, top-k, số epoch). Việc xác lập một thứ hạng đầy đủ giữa bốn chiến lược điền khuyết trên toàn bộ 48 cấu hình cần một phân tích tổng hợp theo trục thiết kế, được đề xuất là hướng bổ sung trực tiếp.
 \end{itemize}
 
