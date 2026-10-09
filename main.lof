@@ -1,7 +1,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Kiến trúc khung EarlyRisk-MOOC với năm tầng. Tầng 1 lọc người học có hoạt động thực sự từ MOOCCubeX. Tầng 2 trích xuất đặc trưng và tạo cửa sổ chống rò rỉ. Tầng 3 đối sánh bốn chiến lược điền giá trị thiếu. Tầng 4 huấn luyện hai bộ trích xuất chuỗi với hai hàm mất mát. Tầng 5 sinh xác suất và điểm rủi ro phục vụ xếp hạng can thiệp.}}{35}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Kiến trúc khung EarlyRisk-MOOC với năm tầng. Tầng 1 lọc người học có hoạt động thực sự từ MOOCCubeX. Tầng 2 trích xuất đặc trưng và tạo cửa sổ chống rò rỉ. Tầng 3 đối sánh bốn chiến lược điền giá trị thiếu. Tầng 4 huấn luyện hai bộ trích xuất chuỗi với hai hàm mất mát. Tầng 5 sinh xác suất và điểm rủi ro phục vụ xếp hạng can thiệp.}}{31}{figure.caption.12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Mặt tiền Pareto giữa Macro-F1 và Runtime (giây) ở cửa sổ W2. Kim cương đỏ là EarlyRisk-MOOC tại W1/W2/W4. Cấu hình W2 (khuyến nghị) đạt Macro-F1 = 0,9835 với Runtime = 76,5 giây. Aouarib ở W4 (GA-XGB, 951,6 giây) nằm ngoài phạm vi trục hoành và không được vẽ.}}{45}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{vietnamese}\ignorespaces Mặt tiền Pareto giữa Macro-F1 và Runtime (giây) ở cửa sổ W2. Kim cương đỏ là EarlyRisk-MOOC tại W1/W2/W4. Cấu hình W2 (khuyến nghị) đạt Macro-F1 = 0,9835 với Runtime = 76,5 giây. Aouarib ở W4 (GA-XGB, 951,6 giây) nằm ngoài phạm vi trục hoành và không được vẽ.}}{40}{figure.caption.16}%
 \addvspace {10\p@ }

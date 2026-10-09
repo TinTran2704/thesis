@@ -3,9 +3,14 @@
 %  Trình bày theo QĐ số 199/QĐ-KHTN ngày 09/02/2023
 %  Engine: XeLaTeX  (Build: XeLaTeX -> BibTeX -> XeLaTeX x2)
 % =====================================================================
-% Dùng lớp extreport (gói extsizes) vì lớp 'report' chuẩn chỉ hỗ trợ 10/11/12pt
-% -> tùy chọn 13/14pt bị bỏ qua. extreport cho phép cỡ nền 14pt (như file mẫu).
-\documentclass[14pt,a4paper,oneside]{extreport}
+% Dùng lớp extreport (gói extsizes) vì lớp 'report' chuẩn chỉ hỗ trợ 10/11/12pt.
+% LƯU Ý: extsizes chỉ hỗ trợ các cỡ 8/9/10/11/12/14/17/20pt -> tùy chọn "13pt"
+% KHÔNG hợp lệ và bị LaTeX âm thầm bỏ qua (xem "Unused global option(s): [13pt]"
+% trong main.log), khiến toàn bộ văn bản thực chất chạy ở cỡ mặc định 10pt.
+% Khắc phục: khai báo lớp ở 12pt (gần nhất được hỗ trợ) rồi định nghĩa lại
+% \normalsize bên dưới để cỡ chữ thân bài thực sự là 13pt/15.6pt theo đúng mẫu
+% SDH-Mau-Bao-cao-De-tai-tot-nghiep-ThS: "Font chữ: Times New Roman, cỡ chữ 13".
+\documentclass[12pt,a4paper,oneside]{extreport}
 
 % ---------- Ngôn ngữ & font (XeLaTeX) --------------------------------
 \usepackage{fontspec}
@@ -21,6 +26,18 @@
 % \setmainfont{Liberation Serif}    % thay thế metric-compatible với Times
 \setmonofont{Consolas}[Scale=0.85]
 
+% ---------- Cỡ chữ thân bài = 13pt (extsizes không có tùy chọn 13pt) -
+\makeatletter
+\renewcommand{\normalsize}{%
+  \@setfontsize\normalsize{13pt}{15.6pt}%
+  \abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
+  \abovedisplayshortskip \z@ \@plus3\p@
+  \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
+  \belowdisplayskip \abovedisplayskip
+  \let\@listi\@listI}
+\normalsize
+\makeatother
+
 % ---------- Canh lề theo QĐ 199 -------------------------------------
 % Trên 3.5cm; Dưới 3cm; Trái 3.5cm; Phải 2cm
 \usepackage[a4paper,top=3.5cm,bottom=3cm,left=3.5cm,right=2cm]{geometry}
@@ -28,6 +45,10 @@
 % ---------- Giãn dòng 1.5 -------------------------------------------
 \usepackage{setspace}
 \onehalfspacing
+
+% ---------- Đoạn văn theo mẫu: thụt đầu dòng 0.5cm, cách đoạn 6pt --------
+\setlength{\parindent}{0.5cm}
+\setlength{\parskip}{6pt}
 
 % ---------- Các gói cơ bản ------------------------------------------
 \usepackage{amsmath,amssymb,amsfonts}
@@ -89,6 +110,27 @@
   {\normalfont\normalsize\bfseries\itshape}{\thesubsubsection}{0.6em}{}
 \titlespacing*{\subsubsection}{0pt}{10pt}{4pt}
 
+% Mục lục: hiển thị "CHƯƠNG N." trước tên chương (thay vì chỉ số N trần).
+\makeatletter
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      \renewcommand*\numberline[1]{CHƯƠNG~##1.\hskip 0.5em}%
+      #1\nobreak\hfil
+      \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+\makeatother
+
 % Caption: đầu đề bảng phía trên, đầu đề hình phía dưới (xử lý khi đặt)
 \captionsetup{labelsep=period,font=small,labelfont=bf}
 \captionsetup[table]{position=above,skip=4pt}
@@ -142,8 +184,8 @@
 % --------------------- TÀI LIỆU THAM KHẢO ---------------------------
 \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{TÀI LIỆU THAM KHẢO}
-\renewcommand{\bibname}{TÀI LIỆU THAM KHẢO}
+\addcontentsline{toc}{chapter}{DANH MỤC TÀI LIỆU THAM KHẢO}
+\renewcommand{\bibname}{DANH MỤC TÀI LIỆU THAM KHẢO}
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 

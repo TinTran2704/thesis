@@ -4,90 +4,90 @@
 \contentsline {chapter}{DANH MỤC CÁC TỪ VIẾT TẮT}{ix}{chapter*.6}%
 \contentsline {chapter}{TRANG THÔNG TIN LUẬN VĂN}{xi}{chapter*.7}%
 \xpg@aux {}{english}
-\contentsline {chapter}{THESIS INFORMATION}{xiv}{chapter*.8}%
+\contentsline {chapter}{THESIS INFORMATION}{xiii}{chapter*.8}%
 \xpg@aux {}{vietnamese}
 \contentsline {chapter}{\numberline {1}MỞ ĐẦU}{1}{chapter.1}%
 \contentsline {section}{Giới thiệu tóm tắt về đề tài}{1}{section*.9}%
 \contentsline {section}{Lý do lựa chọn đề tài}{1}{section*.9}%
 \contentsline {section}{Mục tiêu nghiên cứu}{2}{section*.9}%
 \contentsline {section}{Đối tượng và phạm vi nghiên cứu}{3}{section*.9}%
-\contentsline {section}{Phương pháp nghiên cứu}{4}{section*.9}%
+\contentsline {section}{Phương pháp nghiên cứu}{3}{section*.9}%
 \contentsline {section}{Ý nghĩa thực tiễn của đề tài}{4}{section*.9}%
 \contentsline {section}{Đóng góp chính của luận văn}{4}{section*.9}%
 \contentsline {section}{Bố cục của luận văn}{5}{section*.9}%
-\contentsline {chapter}{\numberline {2}TỔNG QUAN VỀ ĐỀ TÀI}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Bối cảnh và phát biểu vấn đề}{7}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Hiện tượng bỏ học trong MOOC}{7}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Dự báo bỏ học trong bối cảnh phân tích học tập}{8}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Vì sao cần phân biệt nhiều mức rủi ro}{8}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Tiêu chí khảo sát tài liệu}{9}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Sự tiến hóa của lĩnh vực qua ba giai đoạn}{9}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Hai bộ dữ liệu chuẩn của lĩnh vực}{10}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Họ phương pháp 1: Học máy truyền thống và tối ưu hóa}{11}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Các mô hình nền móng}{11}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Tích hợp khả năng giải thích}{11}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Tối ưu hóa lựa chọn đặc trưng và siêu tham số}{12}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Phân tích chi tiết phương pháp luận của họ thứ nhất}{12}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Họ phương pháp 2: Học sâu và tiếp cận dựa trên đồ thị}{13}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Mô hình chuỗi thời gian}{13}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Một kết luận cảnh báo: học sâu không phải lúc nào cũng vượt trội}{14}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Mở rộng sang nhãn đa mức và mô hình đồ thị}{14}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Phân tích chi tiết phương pháp luận của họ thứ hai}{15}{subsection.2.4.4}%
-\contentsline {section}{\numberline {2.5}Phân tích hiện trạng và khoảng trống nghiên cứu}{16}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Định vị thiết kế của khung đề xuất}{18}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Kết luận chương}{19}{section.2.7}%
-\contentsline {chapter}{\numberline {3}PHƯƠNG PHÁP THỰC HIỆN ĐỀ TÀI}{20}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Cơ sở lý thuyết}{20}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Học có giám sát và bài toán phân loại}{20}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Bài toán phân loại có thứ tự}{21}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Mạng nơ-ron hồi quy và LSTM}{21}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}BiLSTM: LSTM hai chiều}{22}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}GRU và cơ chế chú ý nhẹ}{23}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Chiến lược điền giá trị thiếu}{24}{subsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.1.7}Hàm mất mát cho dữ liệu mất cân bằng}{25}{subsection.3.1.7}%
-\contentsline {subsection}{\numberline {3.1.8}Hàm softmax và diễn giải xác suất}{27}{subsection.3.1.8}%
-\contentsline {subsection}{\numberline {3.1.9}Quá khớp, chính quy hóa và tính tổng quát}{27}{subsection.3.1.9}%
-\contentsline {subsection}{\numberline {3.1.10}Các chỉ số đánh giá}{28}{subsection.3.1.10}%
-\contentsline {subsection}{\numberline {3.1.11}Về tính có ý nghĩa thống kê và khả năng tái lập}{29}{subsection.3.1.11}%
-\contentsline {subsection}{\numberline {3.1.12}Các mô hình baseline học máy truyền thống}{30}{subsection.3.1.12}%
-\contentsline {subsection}{\numberline {3.1.13}Đặc điểm dữ liệu MOOC và tín hiệu hành vi theo tuần}{30}{subsection.3.1.13}%
-\contentsline {section}{\numberline {3.2}Phát biểu và mô hình hóa bài toán}{31}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Kiến trúc khung EarlyRisk-MOOC}{33}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Ba nguyên tắc thiết kế}{33}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Năm tầng xử lý}{33}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Quy trình huấn luyện và tối ưu hóa}{35}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Phân tích độ phức tạp tính toán}{36}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Chi tiết cấu hình các mô hình}{36}{subsection.3.3.5}%
-\contentsline {section}{\numberline {3.4}Tổng hợp quy trình thành thuật toán}{37}{section.3.4}%
-\contentsline {chapter}{\numberline {4}KẾT QUẢ ĐỀ TÀI VÀ PHÂN TÍCH, ĐÁNH GIÁ, THẢO LUẬN}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Thiết lập thực nghiệm}{39}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Bộ dữ liệu và quy trình lọc cohort}{39}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Quy tắc gán nhãn và giao thức chia tập}{41}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Tái hiện sáu baseline trên cùng giao thức}{41}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Hạ tầng xử lý dữ liệu lớn và quy trình ETL}{42}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}Kết quả đối sánh với sáu baseline}{43}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Phân tích chi phí--hiệu năng theo lát cắt Pareto}{45}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Phân tích lỗi và hành vi của các baseline}{46}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Kết quả mở rộng: Weighted-F1 và AUC-OVR}{47}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Thực nghiệm nội tại của EarlyRisk-MOOC}{48}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Phân tích ma trận nhầm lẫn}{49}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Phân tích sâu theo cửa sổ quan sát}{50}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Ý nghĩa của khoảng cách hiệu năng so với baseline}{51}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Thảo luận}{52}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Ý nghĩa lý thuyết và thực tiễn}{52}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Đối chiếu với công trình gần nhất}{52}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Cân nhắc về đạo đức và quyền riêng tư}{53}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Về khả năng giải thích của mô hình}{54}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Giới hạn và hướng nghiên cứu tiếp theo}{54}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Hàm ý cho triển khai thực tế}{56}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}Vai trò của phân tích Pareto trong việc chọn điểm vận hành}{57}{subsection.4.4.7}%
-\contentsline {section}{\numberline {4.5}Kết luận chương}{57}{section.4.5}%
-\contentsline {chapter}{\numberline {5}KẾT LUẬN VÀ KIẾN NGHỊ}{58}{chapter.5}%
-\contentsline {section}{Kết luận}{58}{section*.20}%
-\contentsline {section}{Tổng hợp trả lời các câu hỏi nghiên cứu}{59}{Item.8}%
-\contentsline {section}{Kiến nghị và hướng nghiên cứu tiếp theo}{60}{Item.8}%
-\contentsline {chapter}{TÀI LIỆU THAM KHẢO}{62}{section*.21}%
-\contentsline {chapter}{PHỤ LỤC}{67}{appendix*.23}%
-\contentsline {section}{Phụ lục A. Danh mục đầy đủ các đặc trưng đầu vào}{67}{section*.24}%
-\contentsline {section}{Phụ lục B. Siêu tham số chính của khung}{67}{table.Alph0.1}%
-\contentsline {section}{Phụ lục C. Phân công đóng góp (CRediT)}{68}{table.Alph0.2}%
+\contentsline {chapter}{\numberline {2}TỔNG QUAN VỀ ĐỀ TÀI}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Bối cảnh và phát biểu vấn đề}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Hiện tượng bỏ học trong MOOC}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Dự báo bỏ học trong bối cảnh phân tích học tập}{6}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Vì sao cần phân biệt nhiều mức rủi ro}{7}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Tiêu chí khảo sát tài liệu}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Sự tiến hóa của lĩnh vực qua ba giai đoạn}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Hai bộ dữ liệu chuẩn của lĩnh vực}{9}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Họ phương pháp 1: Học máy truyền thống và tối ưu hóa}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Các mô hình nền móng}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Tích hợp khả năng giải thích}{10}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Tối ưu hóa lựa chọn đặc trưng và siêu tham số}{10}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Phân tích chi tiết phương pháp luận của họ thứ nhất}{11}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Họ phương pháp 2: Học sâu và tiếp cận dựa trên đồ thị}{11}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Mô hình chuỗi thời gian}{11}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Một kết luận cảnh báo: học sâu không phải lúc nào cũng vượt trội}{12}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Mở rộng sang nhãn đa mức và mô hình đồ thị}{12}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Phân tích chi tiết phương pháp luận của họ thứ hai}{13}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Phân tích hiện trạng và khoảng trống nghiên cứu}{14}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Định vị thiết kế của khung đề xuất}{16}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Kết luận chương}{17}{section.2.7}%
+\contentsline {chapter}{\numberline {3}PHƯƠNG PHÁP THỰC HIỆN ĐỀ TÀI}{18}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Cơ sở lý thuyết}{18}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Học có giám sát và bài toán phân loại}{18}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Bài toán phân loại có thứ tự}{19}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Mạng nơ-ron hồi quy và LSTM}{19}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}BiLSTM: LSTM hai chiều}{20}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}GRU và cơ chế chú ý nhẹ}{21}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Chiến lược điền giá trị thiếu}{22}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Hàm mất mát cho dữ liệu mất cân bằng}{23}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Hàm softmax và diễn giải xác suất}{24}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}Quá khớp, chính quy hóa và tính tổng quát}{24}{subsection.3.1.9}%
+\contentsline {subsection}{\numberline {3.1.10}Các chỉ số đánh giá}{25}{subsection.3.1.10}%
+\contentsline {subsection}{\numberline {3.1.11}Về tính có ý nghĩa thống kê và khả năng tái lập}{26}{subsection.3.1.11}%
+\contentsline {subsection}{\numberline {3.1.12}Các mô hình baseline học máy truyền thống}{26}{subsection.3.1.12}%
+\contentsline {subsection}{\numberline {3.1.13}Đặc điểm dữ liệu MOOC và tín hiệu hành vi theo tuần}{27}{subsection.3.1.13}%
+\contentsline {section}{\numberline {3.2}Phát biểu và mô hình hóa bài toán}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Kiến trúc khung EarlyRisk-MOOC}{30}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Ba nguyên tắc thiết kế}{30}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Năm tầng xử lý}{30}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Quy trình huấn luyện và tối ưu hóa}{31}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Phân tích độ phức tạp tính toán}{32}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Chi tiết cấu hình các mô hình}{32}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Tổng hợp quy trình thành thuật toán}{33}{section.3.4}%
+\contentsline {chapter}{\numberline {4}KẾT QUẢ ĐỀ TÀI VÀ PHÂN TÍCH, ĐÁNH GIÁ, THẢO LUẬN}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Thiết lập thực nghiệm}{35}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Bộ dữ liệu và quy trình lọc cohort}{35}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Quy tắc gán nhãn và giao thức chia tập}{36}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Tái hiện sáu baseline trên cùng giao thức}{37}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Hạ tầng xử lý dữ liệu lớn và quy trình ETL}{37}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Kết quả đối sánh với sáu baseline}{38}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Phân tích chi phí--hiệu năng theo lát cắt Pareto}{40}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Phân tích lỗi và hành vi của các baseline}{41}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Kết quả mở rộng: Weighted-F1 và AUC-OVR}{42}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Thực nghiệm nội tại của EarlyRisk-MOOC}{43}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Phân tích ma trận nhầm lẫn}{44}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Phân tích sâu theo cửa sổ quan sát}{45}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Ý nghĩa của khoảng cách hiệu năng so với baseline}{45}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Thảo luận}{46}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Ý nghĩa lý thuyết và thực tiễn}{46}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Đối chiếu với công trình gần nhất}{47}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Cân nhắc về đạo đức và quyền riêng tư}{48}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Về khả năng giải thích của mô hình}{48}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Giới hạn và hướng nghiên cứu tiếp theo}{48}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Hàm ý cho triển khai thực tế}{50}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7}Vai trò của phân tích Pareto trong việc chọn điểm vận hành}{50}{subsection.4.4.7}%
+\contentsline {section}{\numberline {4.5}Kết luận chương}{51}{section.4.5}%
+\contentsline {chapter}{\numberline {5}KẾT LUẬN VÀ KIẾN NGHỊ}{52}{chapter.5}%
+\contentsline {section}{Kết luận}{52}{section*.20}%
+\contentsline {section}{Tổng hợp trả lời các câu hỏi nghiên cứu}{53}{Item.8}%
+\contentsline {section}{Kiến nghị và hướng nghiên cứu tiếp theo}{54}{Item.8}%
+\contentsline {chapter}{DANH MỤC TÀI LIỆU THAM KHẢO}{55}{section*.21}%
+\contentsline {chapter}{PHỤ LỤC}{59}{appendix*.23}%
+\contentsline {section}{Phụ lục A. Danh mục đầy đủ các đặc trưng đầu vào}{59}{section*.24}%
+\contentsline {section}{Phụ lục B. Siêu tham số chính của khung}{59}{table.Alph0.1}%
+\contentsline {section}{Phụ lục C. Phân công đóng góp (CRediT)}{60}{table.Alph0.2}%
