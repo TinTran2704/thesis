@@ -1,14 +1,13 @@
-% ===================== KẾT LUẬN VÀ KIẾN NGHỊ =======================
-\chapter*{KẾT LUẬN VÀ KIẾN NGHỊ}
-\addcontentsline{toc}{chapter}{KẾT LUẬN VÀ KIẾN NGHỊ}
-\markboth{KẾT LUẬN VÀ KIẾN NGHỊ}{KẾT LUẬN VÀ KIẾN NGHỊ}
+% ===================== CHƯƠNG 5: KẾT LUẬN VÀ KIẾN NGHỊ =============
+\chapter{KẾT LUẬN VÀ KIẾN NGHỊ}
+\label{ch:ketluan}
 
 \section*{1. Kết luận}
 \addcontentsline{toc}{section}{Kết luận}
 
 Luận văn này trình bày \textit{EarlyRisk-MOOC}, một khung dự báo sớm rủi ro bỏ học trong MOOC với trọng tâm là khả năng phát hiện sớm, tính nhất quán của benchmark và khả năng triển khai. Bài toán được mô hình hóa dưới dạng phân loại nhãn rủi ro có thứ tự A/B/C/D/E, cho phép không chỉ dự báo trạng thái hoàn thành/không hoàn thành mà còn nhận diện nhóm người học có nguy cơ cao nhưng vẫn còn khả năng can thiệp.
 
-Thực nghiệm trên bộ dữ liệu MOOCCubeX với 100.409 cặp người học--khóa học, tính trung bình trên 5 hạt giống ngẫu nhiên, cho thấy cấu hình W2 + KNN + BiLSTM đạt Macro-F1 = 0,9847, dẫn đầu ở cả ba cửa sổ W1/W2/W4, giữ được 99,2\% chất lượng của W4 trong khi giảm 21,3\% thời gian chạy; vượt baseline tốt nhất 12,3\% điểm Macro-F1 tại W2 và đặc biệt mạnh ở lớp can thiệp D với $\FoneD = 0{,}9920$.
+Thực nghiệm trên bộ dữ liệu MOOCCubeX với 100.409 cặp người học--khóa học, tính trung bình trên 5 hạt giống ngẫu nhiên, cho thấy cấu hình W2 + KNN + BiLSTM + cb\_focal đạt Macro-F1 = 0,9835, dẫn đầu ở cả ba cửa sổ W1/W2/W4, giữ được 99,1\% chất lượng của W4 trong khi giảm 29,2\% thời gian chạy; vượt baseline tốt nhất 13,9\% điểm Macro-F1 tại W2 và đặc biệt mạnh ở lớp can thiệp D với $\FoneD = 0{,}9914$.
 
 Những phát hiện mới chính của luận văn, được trình bày một cách lượng hóa và khách quan, gồm:
 
@@ -24,11 +23,11 @@ Những phát hiện mới chính của luận văn, được trình bày một 
 
 Ba câu hỏi nghiên cứu đặt ra ở phần Mở đầu đã được trả lời đầy đủ qua thực nghiệm.
 
-\textit{RQ1 -- về ảnh hưởng của cửa sổ quan sát.} Cửa sổ quan sát có ảnh hưởng khác nhau tùy mô hình, tùy thuộc mô hình đó có khai thác được thêm thông tin theo tuần khi $W$ tăng hay không: EarlyRisk-MOOC tăng $+0{,}0565$ Macro-F1 từ W1 đến W4, trong khi các mô hình dựa trên đặc trưng tổng hợp cố định (Aouarib, Basnet, Dass) gần như không đổi (chênh lệch 0,0024--0,0115). EarlyRisk-MOOC dẫn đầu Macro-F1 ở \emph{cả ba} cửa sổ, kể cả W1 (0,9364 so với 0,8601 của baseline mạnh nhất), và khoảng cách với baseline mạnh nhất còn mở rộng thêm khi cửa sổ dài hơn (8,1\% ở W1 lên 12,3\% ở W2). Tồn tại một điểm vận hành cân bằng là W2, giữ 99,2\% chất lượng của W4 với chi phí thấp hơn 21,3\% và thời điểm cảnh báo sớm hơn hai tuần.
+\textit{RQ1 -- về ảnh hưởng của cửa sổ quan sát.} Cửa sổ quan sát có ảnh hưởng khác nhau tùy mô hình, tùy thuộc mô hình đó có khai thác được thêm thông tin theo tuần khi $W$ tăng hay không: EarlyRisk-MOOC tăng $+0{,}0557$ Macro-F1 từ W1 đến W4, trong khi các mô hình dựa trên đặc trưng tổng hợp cố định (Aouarib, Basnet, Dass) gần như không đổi (chênh lệch 0,0024--0,0115). EarlyRisk-MOOC dẫn đầu Macro-F1 ở \emph{cả ba} cửa sổ, kể cả W1 (0,9364 so với 0,8601 của baseline mạnh nhất), và khoảng cách với baseline mạnh nhất còn mở rộng thêm khi cửa sổ dài hơn (8,9\% ở W1 lên 13,9\% ở W2). Tồn tại một điểm vận hành cân bằng là W2, giữ 99,1\% chất lượng của W4 với chi phí thấp hơn 29,2\% và thời điểm cảnh báo sớm hơn hai tuần.
 
 \textit{RQ2 -- về chiến lược điền giá trị thiếu.} Trong cả ba cửa sổ, cấu hình tốt nhất đều dùng chiến lược điền giá trị thiếu KNN (Bảng~\ref{tab:noitai}), cho thấy trong bối cảnh cửa sổ sớm, một giải pháp cục bộ và nhẹ như KNN đã đủ để đạt hiệu năng tốt nhất mà không cần chi phí dựng đồ thị $O(n^2)$ của graph\_only/graph\_adv. Việc xác lập một thứ hạng đầy đủ và nhất quán giữa cả bốn chiến lược trên toàn bộ 48 cấu hình cần một bảng tổng hợp theo trục thiết kế, được đề xuất là hướng bổ sung trực tiếp.
 
-\textit{RQ3 -- về khả năng phát hiện lớp can thiệp.} Khung đề xuất cải thiện đáng kể khả năng phát hiện nhóm cần can thiệp: $\FoneD = 0{,}9920$ tại W2 vượt các baseline từ 0,04 đến 0,21 điểm tuyệt đối, trong đó khoảng cách hẹp nhất là với hai baseline họ cây mạnh nhất (Dass, Aouarib). Đây là điểm khác biệt chức năng quan trọng nhất, vì lớp D chính là vùng mà can thiệp còn có ý nghĩa; tuy nhiên cần lưu ý lớp D chiếm 64,11\% cohort (lớp đa số), nên $\FoneD$ cao phản ánh khả năng phân biệt tốt lớp D chứ không phải thành tích trên một nhóm thiểu số hiếm gặp.
+\textit{RQ3 -- về khả năng phát hiện lớp can thiệp.} Khung đề xuất cải thiện đáng kể khả năng phát hiện nhóm cần can thiệp: $\FoneD = 0{,}9914$ tại W2 vượt các baseline từ 0,04 đến 0,21 điểm tuyệt đối, trong đó khoảng cách hẹp nhất là với hai baseline họ cây mạnh nhất (Dass, Aouarib). Đây là điểm khác biệt chức năng quan trọng nhất, vì lớp D chính là vùng mà can thiệp còn có ý nghĩa; tuy nhiên cần lưu ý lớp D chiếm 64,11\% cohort (lớp đa số), nên $\FoneD$ cao phản ánh khả năng phân biệt tốt lớp D chứ không phải thành tích trên một nhóm thiểu số hiếm gặp.
 
 \section*{3. Kiến nghị và hướng nghiên cứu tiếp theo}
 \addcontentsline{toc}{section}{Kiến nghị và hướng nghiên cứu tiếp theo}

@@ -1,4 +1,4 @@
-% ===================== CHƯƠNG 2: PHƯƠNG PHÁP =======================
+% ===================== CHƯƠNG 3: PHƯƠNG PHÁP =======================
 \chapter{PHƯƠNG PHÁP THỰC HIỆN ĐỀ TÀI}
 \label{ch:phuongphap}
 
@@ -127,7 +127,7 @@ Trong bối cảnh dự báo bỏ học, $\text{Recall}_D$ -- tỷ lệ phát hi
 
 \subsection{Về tính có ý nghĩa thống kê và khả năng tái lập}
 
-Một điểm phương pháp luận quan trọng của luận văn là bảo đảm các so sánh giữa các hệ thống có ý nghĩa thống kê. Điều này đạt được thông qua ba cơ chế. \textit{Thứ nhất}, mọi hệ thống được đánh giá trên \emph{cùng một cohort} 100.409 cặp, \emph{cùng một split} 8:1:1 và \emph{cùng một hạt giống} ngẫu nhiên 42. Nhờ đó, sự khác biệt về hiệu năng giữa các hệ thống phản ánh khác biệt thực sự về năng lực mô hình, không phải khác biệt ngẫu nhiên do dữ liệu hay cách chia tập. \textit{Thứ hai}, quy mô cohort lớn (hàng trăm nghìn mẫu) làm giảm phương sai của các ước lượng hiệu năng, khiến các khoảng cách quan sát được (ví dụ 12,3\% Macro-F1 tại W2) đủ lớn để tin cậy. \textit{Thứ ba}, việc cố định phần cứng bảo đảm các so sánh về thời gian chạy là công bằng.
+Một điểm phương pháp luận quan trọng của luận văn là bảo đảm các so sánh giữa các hệ thống có ý nghĩa thống kê. Điều này đạt được thông qua ba cơ chế. \textit{Thứ nhất}, mọi hệ thống được đánh giá trên \emph{cùng một cohort} 100.409 cặp, \emph{cùng một split} 8:1:1 và \emph{cùng một hạt giống} ngẫu nhiên 42. Nhờ đó, sự khác biệt về hiệu năng giữa các hệ thống phản ánh khác biệt thực sự về năng lực mô hình, không phải khác biệt ngẫu nhiên do dữ liệu hay cách chia tập. \textit{Thứ hai}, quy mô cohort lớn (hàng trăm nghìn mẫu) làm giảm phương sai của các ước lượng hiệu năng, khiến các khoảng cách quan sát được (ví dụ 13,9\% Macro-F1 tại W2) đủ lớn để tin cậy. \textit{Thứ ba}, việc cố định phần cứng bảo đảm các so sánh về thời gian chạy là công bằng.
 
 So với nhiều nghiên cứu trước vốn so sánh các mô hình được đánh giá trên các dữ liệu, giao thức và phần cứng khác nhau, cách tiếp cận này của luận văn đưa việc đối sánh lên một mức độ chặt chẽ cao hơn. Đây chính là ý nghĩa cốt lõi của cụm từ ``benchmark thống nhất'' trong tên khung: không chỉ chạy nhiều mô hình, mà chạy chúng trong một điều kiện được kiểm soát nghiêm ngặt để mọi khác biệt quan sát được đều có thể quy về khác biệt về thiết kế mô hình.
 

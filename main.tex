@@ -74,11 +74,10 @@
 
 % ---------- Định dạng tiêu đề chương/mục ----------------------------
 \usepackage{titlesec}
-% Cỡ tiêu đề theo file mẫu (23C11048): chương rất lớn, mục \Large, tiểu mục \large.
-% Chương: "Chương N" (\huge) trên một dòng, tên chương (\Huge) bên dưới, canh giữa.
-\titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries\centering}
-  {Chương \thechapter}{12pt}{\Huge}
+% Cỡ tiêu đề theo QĐ 199: "CHƯƠNG N. TÊN CHƯƠNG" trên một dòng, in hoa, in đậm, canh giữa.
+\titleformat{\chapter}
+  {\normalfont\Huge\bfseries\centering}
+  {CHƯƠNG \thechapter.}{0.5em}{}
 \titlespacing*{\chapter}{0pt}{0pt}{24pt}
 \titleformat{\section}
   {\normalfont\Large\bfseries}{\thesection}{0.6em}{}
@@ -109,12 +108,18 @@
 \begin{document}
 
 % --------------------- PHẦN ĐẦU (đánh số La Mã) ---------------------
-\pagenumbering{roman}
-
+% Trang bìa ngoài & bìa phụ không đánh số trang; số La Mã bắt đầu từ i tại
+% trang LỜI CAM ĐOAN, nên \pagenumbering{roman} (reset về 1) đặt sau 2 trang bìa.
 \input{frontmatter/01-biangoai}      % Mẫu 1 (bìa ngoài)
 \input{frontmatter/02-biaphu}        % Mẫu 2 (phụ bìa)
+
+\pagenumbering{roman}
+
 \input{frontmatter/03-camdoan}       % Mẫu 3 (lời cam đoan)
 \input{frontmatter/04-camon}         % Lời cảm ơn
+
+\renewcommand{\listfigurename}{DANH MỤC CÁC HÌNH, BIỂU ĐỒ}
+\renewcommand{\listtablename}{DANH MỤC CÁC BẢNG SỐ LIỆU}
 
 \tableofcontents
 \listoffigures
@@ -128,11 +133,11 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-\input{chapters/00-modau}            % MỞ ĐẦU
-\input{chapters/01-tongquan}         % Chương 1
-\input{chapters/02-phuongphap}       % Chương 2
-\input{chapters/03-ketqua}           % Chương 3
-\input{chapters/04-ketluan}          % KẾT LUẬN VÀ KIẾN NGHỊ
+\input{chapters/00-modau}            % Chương 1 - MỞ ĐẦU
+\input{chapters/01-tongquan}         % Chương 2 - TỔNG QUAN VỀ ĐỀ TÀI
+\input{chapters/02-phuongphap}       % Chương 3 - PHƯƠNG PHÁP THỰC HIỆN ĐỀ TÀI
+\input{chapters/03-ketqua}           % Chương 4 - KẾT QUẢ ĐỀ TÀI VÀ PHÂN TÍCH, ĐÁNH GIÁ, THẢO LUẬN
+\input{chapters/04-ketluan}          % Chương 5 - KẾT LUẬN VÀ KIẾN NGHỊ
 
 % --------------------- TÀI LIỆU THAM KHẢO ---------------------------
 \cleardoublepage

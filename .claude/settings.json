@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"0,98\\\\|0,99\\\\|84,2\\\\|107,1\\\\|cb_focal\\\\|cb\\\\\\\\\\\\\\\\_focal\\\\|12,3\\\\|8,1\\\\|27,1\\\\|21,3\\\\|99,2\" chapters/00-modau.tex chapters/02-phuongphap.tex chapters/04-ketluan.tex frontmatter/06-thongtindoan.tex)",
+      "Bash(grep -rn \"0,9847\\\\|0,9929\\\\|0,9920\\\\|0,9792\\\\|0,9989\\\\|0,9997\\\\|84,2\\\\|107,1\\\\|21,3\\\\|99,2\\\\b\\\\|12,3\\\\|8,1\\\\\\\\\\\\\\\\%\\\\|27,1\\\\|0,0565\\\\|0,0346\\\\|0,0059\\\\|0,0901\\\\|0,0170\\\\|0,0083\\\\|0,1216\\\\|0,1213\\\\|0,0417\\\\|0,0444\\\\|0,2079\\\\|cb_focal_ordinal & 0\\\\|cb\\\\\\\\\\\\\\\\_focal\\\\\\\\\\\\\\\\_ordinal &\" chapters/ frontmatter/)",
+      "Bash(xelatex -interaction=nonstopmode -halt-on-error main.tex)",
+      "Read(//tmp/**)",
+      "Bash(bibtex main *)",
+      "Bash(pdftotext -f 1 -l 15 main.pdf -)",
+      "Bash(pdftoppm -f 1 -l 2 -r 150 -png main.pdf cover)",
+      "Bash(rm -f cover-01.png cover-02.png)",
+      "Bash(pdftoppm -f 2 -l 2 -r 150 -png main.pdf biaphu2)",
+      "Bash(pdftoppm -f 3 -l 3 -r 150 -png main.pdf camdoan3)",
+      "Bash(pdftoppm -f 9 -l 10 -r 150 -png main.pdf lof9)",
+      "Bash(pdftoppm -f 13 -l 13 -r 150 -png main.pdf thesisinfo13)",
+      "Bash(pdftoppm -f 15 -l 15 -r 150 -png main.pdf chap1)",
+      "Bash(python3 -c ' *)",
+      "Bash(pdftoppm -f 17 -l 17 -r 150 -png main.pdf modauheading)",
+      "WebFetch(domain:www.mdpi.com)",
+      "Bash(pdftoppm -f 14 -l 15 -r 150 -png main.pdf v2vnsign)",
+      "Bash(pdftoppm -f 18 -l 18 -r 150 -png main.pdf v2ch1)",
+      "Bash(pdftoppm -f 76 -l 76 -r 150 -png main.pdf v2ch5)",
+      "Bash(pdftoppm -f 75 -l 75 -r 150 -png main.pdf v2ch5real)"
+    ]
+  }
+}
